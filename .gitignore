@@ -1,0 +1,14 @@
+*.properties
+config/plugins.xml
+dita-ot-3.1/build.xml
+dita-ot-3.1/catalog-dita.xml
+plugins/org.dita.base/build_preprocess.xml
+plugins/org.dita.base/build_preprocess2.xml
+plugins/org.dita.eclipsehelp/build_dita2eclipsehelp.xml
+plugins/org.dita.html5/build_dita2html5.xml
+plugins/org.dita.htmlhelp/build_dita2htmlhelp.xml
+plugins/org.dita.pdf2/build.xml
+plugins/org.dita.xhtml/build_dita2xhtml.xml
+plugins/org.dita.xhtml/build_general.xml
+plugins/org.lwdita/build-html.xml
+plugins/org.lwdita/build-markdown.xml

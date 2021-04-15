@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.dita.dost.writer.TestEclipseIndexWriter" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-09T18:51:21" hostname="travis-job-dita-ot-dita-ot-390191281.travisci.net" time="0.01">
-  <properties/>
-  <testcase name="testwrite" classname="org.dita.dost.writer.TestEclipseIndexWriter" time="0.01"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.dita.dost.writer.TestCHMIndexWriter" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-09T18:51:23" hostname="travis-job-dita-ot-dita-ot-390191281.travisci.net" time="0.013">
-  <properties/>
-  <testcase name="testWrite" classname="org.dita.dost.writer.TestCHMIndexWriter" time="0.013"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
