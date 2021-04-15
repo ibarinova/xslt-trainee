@@ -1,3 +1,4 @@
+*.properties
 config/plugins.xml
 dita-ot-3.1/build.xml
 dita-ot-3.1/catalog-dita.xml
