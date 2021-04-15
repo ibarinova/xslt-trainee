@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"Web-based resources","shortdesc":"<p class=\"shortdesc\">There are many vital DITA resources online, including the Yahoo! dita-users group and the DITA-OT project     website at dita-ot.org.</p>","href":"topics\/web-based-resources.html","attributes": {"data-id":"ID",},"menu": {"hasChildren":false,},"tocID":"ID-d50e3918","topics":[]}]});

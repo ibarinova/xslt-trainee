@@ -1,0 +1,171 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="21.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta charset="UTF-8" /><meta name="copyright" content="(C) Copyright 2021" /><meta name="DC.rights.owner" content="(C) Copyright 2021" /><meta name="DC.Type" content="task" /><meta name="description" content="Usually, DITA builds require setting a number of parameters that do not change frequently. You can reference a set of build parameters defined in a .properties file when building output with the dita command. If needed, you can override any parameter by specifying it explicitly as an argument to the dita command." /><meta name="DC.Relation" scheme="URI" content="../topics/build-using-dita-command.html" /><meta name="prodname" content="DITA Open Toolkit" /><meta name="prodname" content="DITA Open Toolkit" /><meta name="version" content="" /><meta name="version" content="" /><meta name="DC.Format" content="HTML5" /><meta name="DC.Identifier" content="using-dita-properties-file" />        
+      <title>Setting build parameters with .properties files</title><!--  Generated with Oxygen version 21.0, build number 2019032613.  --><meta name="wh-path2root" content="../" /><meta name="wh-toc-id" content="using-dita-properties-file-d50e281" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2019032613" /><script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script><script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen.css?buildId=2019032613" /><link rel="stylesheet" type="text/css" href="../css/custom.css" /></head>
+
+    <body id="using-dita-properties-file" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">DITA Open Toolkit <span class="keyword">3.1</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu "><ul xmlns:xhtml="http://www.w3.org/1999/xhtml" role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="installing-client-d50e31-mi" data-tocid="installing-client-d50e31" data-state="not-ready" class=" topicref " data-id="installing-client"><span class="title"><a href="../topics/installing-client.html">Installing DITA-OT</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="alternative-authoring-formats-d50e129-mi" data-tocid="alternative-authoring-formats-d50e129" data-state="not-ready" class=" topicref " data-id="alternative-authoring-formats"><span class="title"><a href="../topics/alternative-input-formats.html">Authoring formats</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tranforming-dita-content-d50e227-mi" data-tocid="tranforming-dita-content-d50e227" data-state="not-ready" class=" topicref " data-id="tranforming-dita-content"><span class="title"><a href="../topics/building-output.html">Building output</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ID-d50e661-mi" data-tocid="ID-d50e661" data-state="not-ready" class=" topicref " data-id="ID"><span class="title"><a href="../parameters/index.html">Setting parameters</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="extending-the-ot-d50e1048-mi" data-tocid="extending-the-ot-d50e1048" data-state="not-ready" class=" topicref " data-id="extending-the-ot"><span class="title"><a href="../topics/extending-the-ot.html">Customizing DITA-OT</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="task_pd3_vdv_qg-d50e2703-mi" data-tocid="task_pd3_vdv_qg-d50e2703" data-state="not-ready" class=" topicref " data-id="task_pd3_vdv_qg"><span class="title"><a href="../topics/troubleshooting-overview.html">Troubleshooting</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="reference-d50e2881-mi" data-tocid="reference-d50e2881" data-state="not-ready" class=" topicref " data-id="reference"><span class="title"><a href="../reference/index.html">Reference</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ID-d50e3897-mi" data-tocid="ID-d50e3897" data-state="not-ready" class=" topicref " data-id="ID"><span class="title"><a href="../topics/dita-and-dita-ot-resources.html">Resources</a></span></span></li><li role="menuitem"><span id="ID-d50e3939-mi" data-tocid="ID-d50e3939" data-state="leaf" class=" topicref " data-id="ID"><span class="title"><a href="../release-notes/index.html">Release Notes</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class=" wh_search_input "><form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required" /><button type="submit" class="wh_search_button" aria-label="Search"><span>Search</span></button></div></form></div>
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref" data-id="tranforming-dita-content"><span class="title"><a href="../topics/building-output.html">Building output</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">You can use either the <span class="keyword cmdname">dita</span> command-line tool or Ant to transform     DITA content to the various output formats that are supported by the DITA Open     Toolkit.</p></span></span></span></li><li><span class="topicref" data-id="using-command-line-tool"><span class="title"><a href="../topics/build-using-dita-command.html">Using the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword cmdname">dita</span> command</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">You can generate output using the DITA Open Toolkit <span class="keyword cmdname">dita</span> command-line tool. Build     parameters can be specified on the command line or with <span class="ph filepath">.properties</span> files.</p></span></span></span></li><li class="active"><span class="topicref" data-id="using-dita-properties-file"><span class="title"><a href="../topics/using-dita-properties-file.html">Using a properties file</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Usually, DITA builds require setting a number of parameters that do not change frequently. You can     reference a set of build parameters defined in a <span class="ph filepath">.properties</span> file when building output with the       <span class="keyword cmdname">dita</span> command. If needed, you can override any parameter by specifying it explicitly as an     argument to the <span class="keyword cmdname">dita</span> command.</p></span></span></span></li></ol></div>
+
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="tranforming-dita-content-d50e227" class="topicref" data-id="tranforming-dita-content" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tranforming-dita-content-d50e227-link" class="wh-expand-btn"></span><span class="title"><a href="../topics/building-output.html" id="tranforming-dita-content-d50e227-link">Building output</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">You can use either the <span class="keyword cmdname">dita</span> command-line tool or Ant to transform     DITA content to the various output formats that are supported by the DITA Open     Toolkit.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="using-command-line-tool-d50e251" class="topicref" data-id="using-command-line-tool" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action using-command-line-tool-d50e251-link" class="wh-expand-btn"></span><span class="title"><a href="../topics/build-using-dita-command.html" id="using-command-line-tool-d50e251-link">Using the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword cmdname">dita</span> command</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">You can generate output using the DITA Open Toolkit <span class="keyword cmdname">dita</span> command-line tool. Build     parameters can be specified on the command line or with <span class="ph filepath">.properties</span> files.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" class="active"><span data-tocid="using-dita-properties-file-d50e281" class="topicref" data-id="using-dita-properties-file" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../topics/using-dita-properties-file.html" id="using-dita-properties-file-d50e281-link">Using a properties file</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Usually, DITA builds require setting a number of parameters that do not change frequently. You can     reference a set of build parameters defined in a <span class="ph filepath">.properties</span> file when building output with the       <span class="keyword cmdname">dita</span> command. If needed, you can override any parameter by specifying it explicitly as an     argument to the <span class="keyword cmdname">dita</span> command.</p></span></span></span></li><li role="treeitem"><span data-tocid="migrating-ant-to-dita-d50e311" class="topicref" data-id="migrating-ant-to-dita" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../topics/migrating-ant-to-dita.html" id="migrating-ant-to-dita-d50e311-link">Migrating Ant builds</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Although Ant builds are still supported in the DITA Open Toolkit, you might want to switch to use the new       <span class="keyword cmdname">dita</span> command.</p></span></span></span></li></ul></li><li role="treeitem" aria-expanded="false"><span data-tocid="DITA-ant-d50e342" class="topicref" data-id="DITA-ant" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action DITA-ant-d50e342-link" class="wh-expand-btn"></span><span class="title"><a href="../topics/publishing-with-ant.html" id="DITA-ant-d50e342-link">Using Ant</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">You can use Ant to invoke the DITA Open Toolkit and generate output. You can use the complete set of     parameters that are supported by the toolkit.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="availabletransforms-d50e426" class="topicref" data-id="availabletransforms" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action availabletransforms-d50e426-link" class="wh-expand-btn"></span><span class="title"><a href="../topics/output-formats.html" id="availabletransforms-d50e426-link">Output formats</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA Open Toolkit ships with several core transformations that generate different output formats from     DITA content. Each transformation represents an implementation of the processing that is defined by OASIS in the     DITA specification.</p></span></span></span></li></ul></li></ul></div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Setting build parameters with <span class="ph filepath">.properties</span> files</h1>
+  
+  
+  <div class="body taskbody"><p class="shortdesc">Usually, DITA builds require setting a number of parameters that do not change frequently. You can
+    reference a set of build parameters defined in a <span class="ph filepath">.properties</span> file when building output with the
+      <span class="keyword cmdname">dita</span> command. If needed, you can override any parameter by specifying it explicitly as an
+    argument to the <span class="keyword cmdname">dita</span> command.</p>
+    <section class="section"><h2 class="title sectiontitle">About <span class="ph filepath">.properties</span> files</h2>
+      
+      <p class="p">A <span class="ph filepath">.properties</span> file is a text file that enumerates one or more name-value pairs, one per
+        line, in the format <code class="ph codeph">name = value</code>. The <span class="ph filepath">.properties</span> filename extension is
+        customarily used, but is not required.</p>
+      <ul class="ul" compact="compact">
+        <li class="li">Lines beginning with the <code class="ph codeph">#</code> character are comments.</li>
+        <li class="li">Properties specified as arguments of the <span class="keyword cmdname">dita</span> command override those set in
+            <span class="ph filepath">.properties</span> files. <div class="note myrestriction mynote_restriction"><span class="mynote__title">Restriction:</span> For this reason,
+              <span class="keyword parmname">args.input</span> and <span class="keyword parmname">transtype</span> can't be set in the
+              <span class="ph filepath">.properties</span> file.</div></li>
+        <li class="li">If you specify the same property more than once, the last instance is used.</li>
+        <li class="li">Properties not used by the selected transformation type are ignored.</li>
+        <li class="li">Properties can reference other property values defined elsewhere in the <span class="ph filepath">.properties</span>
+          file or passed by the <span class="keyword cmdname">dita</span> command. Use the Ant
+            <code class="ph codeph">${<var class="keyword varname">property.name</var>}</code> syntax.</li>
+        <li class="li">You can set properties not only for the default DITA-OT transformation types, but also for custom plugins.
+        </li>
+      </ul>
+    </section>
+    <ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">Create your <span class="ph filepath">.properties</span> file.</span>
+        <div class="itemgroup info">
+          <div class="note mytip mynote_tip"><span class="mynote__title">Tip:</span> Copy <span class="ph filepath"><var class="keyword varname">dita-ot-dir</var>/docsrc/samples</span><span class="ph filepath">/properties/template.properties</span>; this template describes each of the properties you can
+        set.</div>
+        </div>
+        <div class="itemgroup stepxmp">
+          <p class="p">For example:</p>
+          <div class="p"><pre class="pre codeblock normalize-space show-line-numbers show-whitespace"><code></code></pre>
+          </div>
+        </div>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Reference your <span class="ph filepath">.properties</span> file with the <span class="keyword cmdname">dita</span> command when building
+          your output.</span>
+        <div class="itemgroup stepxmp">
+          <pre class="pre codeblock"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--input</span>=<var class="keyword varname">my.ditamap</var> <span class="keyword parmname">--format</span>=<span class="keyword option">html5</span> <span class="keyword parmname">--propertyfile</span>=<var class="keyword varname">my.properties</var></code></pre>
+        </div>
+        <div class="itemgroup info"></div>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">If needed, pass additional arguments to the <span class="keyword cmdname">dita</span> command to override specific build
+          parameters. </span>
+        <div class="itemgroup stepxmp">
+          <p class="p">For example, to build output once with <code class="keyword markupname xmlelement">&lt;draft&gt;</code> and
+              <code class="keyword markupname xmlelement">&lt;required-cleanup&gt;</code> content:</p>
+          <pre class="pre codeblock"><code><span class="keyword cmdname">dita</span> <span class="keyword parmname">--input</span>=<var class="keyword varname">my.ditamap</var> <span class="keyword parmname">--format</span>=<span class="keyword option">html5</span> <span class="keyword parmname">--propertyfile</span>=<var class="keyword varname">my.properties</var> \
+     <span class="keyword parmname">--args.draft</span>=<span class="keyword option">yes</span></code></pre>
+        </div>
+        <div class="itemgroup info">
+          <div class="note mytip mynote_tip"><span class="mynote__title">Tip:</span> If you are building in different environments where the location of the input
+        files is not consistent, set <span class="keyword option">args.input.dir</span> with the <span class="keyword cmdname">dita</span> command and
+        reference its value with <code class="ph codeph">${args.input.dir}</code> in your <span class="ph filepath">.properties</span>
+        file.</div>
+        </div>
+      </li></ol>
+  </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="21.0">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+    </body>
+</html>
