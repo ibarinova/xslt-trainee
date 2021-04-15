@@ -1,0 +1,41 @@
+@import "../webauthor/topic-content-mode.css";
+
+@media oxygen and (platform:webapp) {
+  :root {
+    font-family: Georgia, Caladea, Cambria, serif;
+
+    webkit-font-feature-settings: "lnum" 1;
+    -moz-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+
+    font-size: 1.1em;
+  }
+
+  /* Increase the distance between the title and the rest of the document for an improved look */
+  *[class~="topic/title"] {
+    margin: 0.6em 0;
+  }
+
+  /* Tables look better with font slightly smaller than the rest of the surrounding paragraphs */
+  *[class ~= "topic/simpletable"]{
+    font-size: 0.95em;
+  }
+
+  *[class~="topic/pre"],
+  *[class~="topic/indexterm"],
+  *[class~="pr-d/codeph"],
+  *[class~="pr-d/apiname"] {
+    font-family: Consolas, Monaco, "Lucida Console", monospace;
+  }
+
+  *[class~="topic/pre"] {
+    line-height : 1.3;
+  }
+
+}
+
+@media oxygen and (platform:webapp) {
+  *[class~="topic/entry"] {
+    font-size: 0.95em;
+  }
+}
