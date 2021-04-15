@@ -12,3 +12,9 @@ plugins/org.dita.xhtml/build_dita2xhtml.xml
 plugins/org.dita.xhtml/build_general.xml
 plugins/org.lwdita/build-html.xml
 plugins/org.lwdita/build-markdown.xml
+plugins/com.oxygenxml.pdf.css/build-extensions.xml
+plugins/com.oxygenxml.pdf.css/build-merged2html5.xml
+plugins/com.oxygenxml.pdf.css/build-merged2merged.xml
+plugins/com.oxygenxml.webhelp.responsive/build_dita.2x.xml
+plugins/com.oxygenxml.webhelp.responsive/build_dita.xml
+plugins/com.oxygenxml.webhelp.responsive/plugin.xml
