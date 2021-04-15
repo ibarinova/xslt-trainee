@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+    Sourceforge.net. See the accompanying license.txt file for 
+    applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="ja-jp">
+    <!-- Japanese -->
+
+    <!-- various labels (not author controlled) -->
+    <str name="Figure">図</str>
+    <str name="Table">表</str>
+    <str name="Next topic">次のトピック</str>
+    <str name="Previous topic">前のトピック</str>
+    <str name="Parent topic">親トピック</str>
+    <str name="Required cleanup">クリーンアップ要求</str>
+    <str name="Draft comment">ドラフト注釈</str>
+    <str name="Option">オプション</str>
+    <str name="Description">説明</str>
+    <str name="Optional">任意</str>
+    <str name="Required">必須</str>
+    <str name="Skip visual syntax diagram">構文図をスキップする</str>
+    <str name="Read syntax diagram">構文図を読む</str>
+    <str name="Start of change">変更の始まり</str>
+    <str name="End of change">変更の終わり</str>
+    <str name="Index">索引</str>
+    <str name="Special characters">特殊文字</str>
+    <str name="Numerics">数字</str>
+    <str name="End notes">脚注</str>
+    <str name="Artwork">アートワーク</str>
+    <str name="Syntax">構文</str>
+    <str name="Type">タイプ</str>
+    <str name="Value">値</str>
+    <!-- Text that goes before a link to a topic -->
+    <str name="intro-to-topic-link"/>
+
+    <!-- peril notice labels -->
+    <str name="Caution">注意</str>
+    <str name="Warning">警告</str>
+    <str name="Note">注</str>
+    <str name="Tip">ヒント</str>
+    <str name="Attention">注意</str>
+    <str name="Danger">危険</str>
+    <str name="Important">重要</str>
+    <str name="Remember">忘れずに</str>
+    <str name="Restriction">制限事項</str>
+    <str name="Notes">注</str>
+    <str name="Fastpath">ファースト・パス</str>
+
+    <!-- default title text for section level generated sections -->
+    <str name="Contents">目次</str>
+    <str name="Related concepts">関連概念</str>
+    <str name="Related tasks">関連タスク</str>
+    <str name="Related reference">関連資料</str>
+    <str name="Related information">関連情報</str>
+
+    <str name="Prerequisite">前提条件</str>
+    <str name="Prerequisites">前提条件</str>
+    <str name="or">または</str>
+
+    <str name="Copyright">Copyright</str>
+
+    <!-- Symbols -->
+    <str name="OpenQuote">"</str>
+    <str name="CloseQuote">"</str>
+    <str name="ColonSymbol">:</str>
+
+    <!-- InfoShare -->
+    <str name="Credo">E-fficiency in technical communication</str>
+    <str name="SubCredo">Single Sourcing in a multilingual environment</str>
+    <str name="Example">Example (ja)</str>
+    <str name="Context">Context (ja)</str>
+    <str name="Postrequisites">Postrequisites (ja)</str>
+    <str name="Result">Result (ja)</str>
+    <str name="Steps">Steps (ja)</str>
+
+
+    <!-- WebHelp related terms -->
+    <str name="Search">Search (ja)</str>
+    <str name="Searching">Searching... (ja)</str>
+    <str name="No documents found">No documents found (ja)</str>
+    <str name="Enter search criteria:">Enter search criteria: (ja)</str>
+    <str name="Following documents found:">Following documents found: (ja)</str>
+    <str name="Print topic">Print topic (ja)</str>
+    <str name="Email topic">Email topic (ja)</str>
+    <str name="Select one">Select one of the available targets by clicking the link (ja)</str>
+    <str name="Close">Close (ja)</str>
+    <str name="see">see (ja)</str>
+    <str name="see also">see also (ja)</str>
+
+    <!-- Waters custom labels -->
+    <str name="TOC">目次</str>
+    <str name="Page">ページ</str>
+    <str name="Revision">リビジョン</str>
+    <str name="Rev">リビジョン</str>
+    <str name="Month names">1 月, 2 月, 3 月, 4 月, 5 月, 6 月, 7 月, 8 月, 9 月, 10 月, 11 月, 12 月</str>
+    <str name="YMD">年, 月, 日</str>
+    <str name="CopyrightWaters">Copyright © Waters Corporation</str>
+    <str name="AllRightsReserved">All rights reserved</str>
+    <str name="Notice">注意</str>
+    <str name="Continued">(続き)</str>
+
+    <str name="expand" js="true" php="false">展開する</str>
+    <str name="collapse" js="true" php="false">折り畳む</str>
+    <str name="search.query" js="true" php="false">検索クエリー</str>
+    <str name="jump.to.results" js="true" php="false">検索結果にジャンプ</str>
+    <str name="on_this_page" js="true" php="false">このページで</str>
+    <str name="expandSections" js="true" php="false">セクションを展開する</str>
+    <str name="collapseSections" js="true" php="false">セクションを折り畳む</str>
+    <str name="Page" js="true" php="false">ページ</str>
+    <str name="Similar results" js="true" php="false">類似の結果</str>
+    <str name="Results for:" js="true" php="false">以下で見つかったドキュメント：</str>
+    <str name="missing" js="true" php="false">見つかりません</str>
+    <str name="label.home" js="true" php="false">ホーム</str>
+    <str name="webhelp.search" js="true" php="false">キーワードで検索</str>
+    <str name="SearchResults" js="true" php="false">検索結果</str>
+    <str name="Loading, please wait ..." js="true" php="false">読み込み中、お待ちください…</str>
+    <str name="Search no results" js="true" php="false">以下で検索結果が返されませんでした：</str>
+    <str name="printThisPage" js="true" php="false">このページを印刷</str>
+    <str name="Back To Top">トップに戻る</str>
+
+</strings>

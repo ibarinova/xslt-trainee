@@ -1,0 +1,9 @@
+@namespace css-param "http://www.oxygenxml.com/extensions/publishing/dita/css/params";
+ 
+/* 
+ * Make the chapters continue one after the other - this avoids extra page breaks before the first chapter.
+ */ 
+:root[css-param|hide-frontpage-toc-index-glossary='yes'] 
+		*[class~='topic/topic'][is-chapter] {
+  -oxy-page-group: auto;
+}

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+    Sourceforge.net. See the accompanying license.txt file for 
+    applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="no-no">
+    <!-- Norwegian -->
+
+    <!-- various labels (not author controlled) -->
+    <str name="Figure">Figur</str>
+    <str name="Table">Tabell</str>
+    <str name="Next topic">Neste emne</str>
+    <str name="Previous topic">Forrige emne</str>
+    <str name="Parent topic">Overordnet emne</str>
+    <str name="Required cleanup">Opprydning nødvendig</str>
+    <str name="Draft comment">Kommentar om utkast</str>
+    <str name="Option">Alternativ</str>
+    <str name="Description">Beskrivelse</str>
+    <str name="Optional">Valgfritt</str>
+    <str name="Required">Nødvendig</str>
+    <str name="Skip visual syntax diagram">Hopp over syntaksdiagram</str>
+    <str name="Read syntax diagram">Les syntaksdiagram</str>
+    <str name="Start of change">Start på endring</str>
+    <str name="End of change">Slutt på endring</str>
+    <str name="Index">Stikkordregister</str>
+    <str name="Special characters">Spesialtegn</str>
+    <str name="Numerics">Numerisk</str>
+    <str name="End notes">Sluttnoter</str>
+    <str name="Artwork">Grafikk</str>
+    <str name="Syntax">Syntaks</str>
+    <str name="Type">Type</str>
+    <str name="Value">Verdi</str>
+    <!-- Text that goes before a link to a topic -->
+    <str name="intro-to-topic-link"/>
+
+    <!-- peril notice labels -->
+    <str name="Caution">Forsiktig</str>
+    <str name="Warning">Advarsel</str>
+    <str name="Note">Merknad</str>
+    <str name="Tip">Tips</str>
+    <str name="Attention">NB</str>
+    <str name="Danger">Fare</str>
+    <str name="Important">Viktig</str>
+    <str name="Remember">Husk</str>
+    <str name="Restriction">Begrensning</str>
+    <str name="Notes">Merknader</str>
+    <str name="Fastpath">Snarvei</str>
+
+    <!-- default title text for section level generated sections -->
+    <str name="Contents">Innhold</str>
+    <str name="Related concepts">Beslektede begreper</str>
+    <str name="Related tasks">Beslektede oppgaver</str>
+    <str name="Related reference">Beslektet referanse</str>
+    <str name="Related information">Beslektet informasjon</str>
+
+    <str name="Prerequisite">Krav</str>
+    <str name="Prerequisites">Krav</str>
+    <str name="or">or</str>
+
+    <str name="Copyright">Copyright</str>
+
+    <!-- Symbols -->
+    <str name="OpenQuote">"</str>
+    <str name="CloseQuote">"</str>
+    <str name="ColonSymbol">:</str>
+
+    <!-- InfoShare -->
+    <str name="Credo">E-fficiency in technical communication</str>
+    <str name="SubCredo">Single Sourcing in a multilingual environment</str>
+    <str name="Example">Example (no)</str>
+    <str name="Context">Context (no)</str>
+    <str name="Postrequisites">Postrequisites (no)</str>
+    <str name="Result">Result (no)</str>
+    <str name="Steps">Steps (no)</str>
+
+
+    <!-- WebHelp related terms -->
+    <str name="Search">Search (no)</str>
+    <str name="Searching">Searching... (no)</str>
+    <str name="No documents found">No documents found (no)</str>
+    <str name="Enter search criteria:">Enter search criteria: (no)</str>
+    <str name="Following documents found:">Following documents found: (no)</str>
+    <str name="Print topic">Print topic (no)</str>
+    <str name="Email topic">Email topic (no)</str>
+    <str name="Select one">Select one of the available targets by clicking the link (no)</str>
+    <str name="Close">Close (no)</str>
+    <str name="see">see (no)</str>
+    <str name="see also">see also (no)</str>
+
+    <!-- Waters custom labels -->
+    <str name="TOC">Innholdsfortegnelse</str>
+    <str name="Page">Side</str>
+    <str name="Revision">Revisjon</str>
+    <str name="Rev">Rev.</str>
+    <str name="Month names">januar, februar, mars, april, mai, juni, juli, august, september, oktober, november, desember</str>
+    <str name="YMD">år, måned, dag</str>
+    <str name="CopyrightWaters">Opphavsrett © Waters Corporation</str>
+    <str name="AllRightsReserved">Med enerett</str>
+    <str name="Notice">Melding</str>
+    <str name="Continued">(fortsatt)</str>
+
+    <str name="expand" js="true" php="false">Expand</str>
+    <str name="collapse" js="true" php="false">Collapse</str>
+    <str name="search.query" js="true" php="false">Search query</str>
+    <str name="jump.to.results" js="true" php="false">Jump to search results</str>
+    <str name="on_this_page" js="true" php="false">On this page</str>
+    <str name="expandSections" js="true" php="false">Expand sections</str>
+    <str name="collapseSections" js="true" php="false">Collapse sections</str>
+    <str name="Page" js="true" php="false">Page</str>
+    <str name="Similar results" js="true" php="false">Similar results</str>
+    <str name="Results for:" js="true" php="false">document(s) found for</str>
+    <str name="missing" js="true" php="false">Missing</str>
+    <str name="label.home" js="true" php="false">Home</str>
+    <str name="webhelp.search" js="true" php="false">Search by keyword</str>
+    <str name="SearchResults" js="true" php="false">Search Results</str>
+    <str name="Loading, please wait ..." js="true" php="false">Loading, please wait ...</str>
+    <str name="Search no results" js="true" php="false">Your search returned no results for</str>
+    <str name="printThisPage" js="true" php="false">Print this page</str>
+    <str name="Back To Top">Back To Top</str>
+
+</strings>

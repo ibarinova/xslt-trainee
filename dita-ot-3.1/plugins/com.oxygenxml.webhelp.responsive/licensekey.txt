@@ -1,0 +1,17 @@
+Registration_Name=GE Healthcare-CTO
+
+Company=GE Healthcare
+
+Category=Enterprise
+
+Component=Scripting
+
+Version=20
+
+Number_of_Licenses=1
+
+Date=03-24-2018
+
+Maintenance=365
+
+SGN=MCwCFGoCbRV7basuvDQXfueR8Gdxyim5AhQev9SyrteWFvpR4+qvHIFo35xZpw\=\=
