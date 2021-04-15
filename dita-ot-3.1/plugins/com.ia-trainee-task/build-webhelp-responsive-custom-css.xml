@@ -5,6 +5,7 @@
             depends="dita2webhelp-responsive-custom-css.init,
                dita2webhelp-responsive-custom-css.copy,
                dita2webhelp-responsive"/>
+
     <target name="dita2webhelp-responsive-custom-css.init">
         <property name="args.css.file" value="css/custom-red.css"/>
 
