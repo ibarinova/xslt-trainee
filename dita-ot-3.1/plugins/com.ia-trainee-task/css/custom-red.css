@@ -1,0 +1,23 @@
+body {
+  color: yellow !important;
+}
+.note::before {
+    content:"";
+    background-image: url("../images/bandcamp-brands.svg");
+    margin: 5px;
+    padding: 5px;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    color: green;
+    display: inline-block;
+}
+.tip{
+    color: purple;
+}
+.danger{
+    color: red;
+}
+.caution{
+    color: orange;
+}

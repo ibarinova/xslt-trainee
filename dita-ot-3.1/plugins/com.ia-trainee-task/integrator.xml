@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com.ia-trainee-task">
+    <import file="build-webhelp-responsive-custom-css.xml"/>
+</project>

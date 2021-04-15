@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project>
+    <target name="dita2ia-webhelp-responsive"
+            depends="dita2webhelp-responsive-custom-css.init,
+               dita2webhelp-responsive-custom-css.copy,
+               dita2webhelp-responsive"/>
+    <target name="dita2webhelp-responsive-custom-css.init">
+        <property name="args.css.file" value="css/custom-red.css"/>
+
+    </target>
+    <target name="dita2webhelp-responsive-custom-css.copy">
+        <copy file="plugins/com.ia-trainee-task/css/custom-red.css" todir="${output.dir}/css"/>
+        <copy file="plugins/com.ia-trainee-task/css/bandcamp-brands.svg" todir="${output.dir}/images"/>
+    </target>
+</project>
+
