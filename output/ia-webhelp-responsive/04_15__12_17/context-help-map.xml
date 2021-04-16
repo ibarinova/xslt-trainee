@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="installing-client" path="topics/installing-client.html"/>
+   <appContext helpID="prerequisite-software" path="topics/prerequisite-software.html"/>
+   <appContext helpID="determining-version-of-dita-ot"
+               path="topics/determining-version-of-ditaot.html"/>
+   <appContext helpID="using-command-line-tool"
+               path="topics/first-build-using-dita-command.html"/>
+   <appContext helpID="alternative-authoring-formats"
+               path="topics/alternative-input-formats.html"/>
+   <appContext helpID="markdown-input" path="topics/markdown-input.html"/>
+   <appContext helpID="lwdita-input" path="topics/lwdita-input.html"/>
+   <appContext helpID="markdown-dita-syntax-reference"
+               path="topics/markdown-dita-syntax-reference.html"/>
+   <appContext helpID="tranforming-dita-content" path="topics/building-output.html"/>
+   <appContext helpID="using-command-line-tool"
+               path="topics/build-using-dita-command.html"/>
+   <appContext helpID="using-dita-properties-file"
+               path="topics/using-dita-properties-file.html"/>
+   <appContext helpID="migrating-ant-to-dita" path="topics/migrating-ant-to-dita.html"/>
+   <appContext helpID="DITA-ant" path="topics/publishing-with-ant.html"/>
+   <appContext helpID="ant" path="topics/ant.html"/>
+   <appContext helpID="runant" path="topics/building-with-ant.html"/>
+   <appContext helpID="creating-an-ant-build-script"
+               path="topics/creating-an-ant-build-script.html"/>
+   <appContext helpID="availabletransforms" path="topics/output-formats.html"/>
+   <appContext helpID="dita2pdf" path="topics/dita2pdf.html"/>
+   <appContext helpID="dita2html5" path="topics/dita2html5.html"/>
+   <appContext helpID="dita2eclipsehelp" path="topics/dita2eclipsehelp.html"/>
+   <appContext helpID="dita2htmlhelp" path="topics/dita2htmlhelp.html"/>
+   <appContext helpID="markdown" path="topics/dita2markdown.html"/>
+   <appContext helpID="normalized-dita" path="topics/dita2dita.html"/>
+   <appContext helpID="dita2tocjs" path="topics/dita2tocjs.html"/>
+   <appContext helpID="dita2troff" path="topics/dita2troff.html"/>
+   <appContext helpID="dita2xhtml" path="topics/dita2xhtml.html"/>
+   <appContext helpID="ID" path="parameters/index.html"/>
+   <appContext helpID="dita-command-properties"
+               path="parameters/dita-command-arguments.html"/>
+   <appContext helpID="dita-ot-ant-properties" path="parameters/parameters_intro.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="pdf" path="parameters/parameters-pdf.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="html5" path="parameters/parameters-html5.html"/>
+   <appContext helpID="xhtml" path="parameters/parameters-xhtml.html"/>
+   <appContext helpID="htmlhelp" path="parameters/parameters-htmlhelp.html"/>
+   <appContext helpID="eclipsehelp" path="parameters/parameters-eclipsehelp.html"/>
+   <appContext helpID="ant-parameters-other" path="parameters/parameters-other.html"/>
+   <appContext helpID="configuring-the-dita-ot"
+               path="parameters/configuration-properties.html"/>
+   <appContext helpID="local.properties" path="parameters/local-properties.html"/>
+   <appContext helpID="lib-org.dita.dost.platform-plugin.properties"
+               path="parameters/lib-plugin-properties.html"/>
+   <appContext helpID="configuration"
+               path="parameters/lib-configuration-properties.html"/>
+   <appContext helpID="ant-properties" path="parameters/internal-ant-properties.html"/>
+   <appContext helpID="extending-the-ot" path="topics/extending-the-ot.html"/>
+   <appContext helpID="customizing-html-output" path="topics/html-customization.html"/>
+   <appContext helpID="custom-html-parameters"
+               path="topics/html-customization-parameters.html"/>
+   <appContext helpID="custom-html-navigation"
+               path="topics/html-customization-navigation.html"/>
+   <appContext helpID="custom-html-css" path="topics/html-customization-css.html"/>
+   <appContext helpID="custom-html-header"
+               path="topics/html-customization-header.html"/>
+   <appContext helpID="ID" path="parameters/generate-copy-outer.html"/>
+   <appContext helpID="custom-html-properties-file"
+               path="topics/html-customization-properties-file.html"/>
+   <appContext helpID="custom-html-plugins"
+               path="topics/html-customization-plugins.html"/>
+   <appContext helpID="custom-html-plugin-bundle-css"
+               path="topics/html-customization-plugin-bundle-css.html"/>
+   <appContext helpID="customizing-pdf-output" path="topics/pdf-customization.html"/>
+   <appContext helpID="pdf_customization_approaches"
+               path="topics/pdf-customization-approaches.html"/>
+   <appContext helpID="types-pdf-customization-plugins"
+               path="topics/pdf-customization-plugin-types.html"/>
+   <appContext helpID="pdf-plugin-structure" path="topics/pdf-plugin-structure.html"/>
+   <appContext helpID="dita2pdf-customization"
+               path="topics/pdf-customization-example.html"/>
+   <appContext helpID="ID" path="topics/pdf-customization-resources.html"/>
+   <appContext helpID="concept_gsc_vcf_vs"
+               path="topics/pdf2-creating-change-bars.html"/>
+   <appContext helpID="dita-globalization" path="topics/globalization.html"/>
+   <appContext helpID="globalization-support" path="topics/globalization-support.html"/>
+   <appContext helpID="plugin-addgeneratedtext"
+               path="topics/plugin-addgeneratedtext.html"/>
+   <appContext helpID="dita-globalization-languages"
+               path="topics/globalization-languages.html"/>
+   <appContext helpID="custom-plugins" path="topics/custom-plugins.html"/>
+   <appContext helpID="plugins-installing" path="topics/plugins-installing.html"/>
+   <appContext helpID="plugins-removing" path="topics/plugins-removing.html"/>
+   <appContext helpID="plugin-configfile" path="topics/plugin-configfile.html"/>
+   <appContext helpID="plugin-dependencies" path="topics/plugin-dependencies.html"/>
+   <appContext helpID="plugins-overview" path="topics/plugin-applications.html"/>
+   <appContext helpID="plugin-xmlcatalog" path="topics/plugin-xmlcatalog.html"/>
+   <appContext helpID="plugin-anttarget" path="topics/plugin-anttarget.html"/>
+   <appContext helpID="plugin-antpreprocess" path="topics/plugin-antpreprocess.html"/>
+   <appContext helpID="plugin-newtranstype" path="topics/plugin-newtranstype.html"/>
+   <appContext helpID="plugin-overridestyle" path="topics/plugin-overridestyle.html"/>
+   <appContext helpID="using-plugin-URI-extension"
+               path="topics/using-plugin-URI-extension.html"/>
+   <appContext helpID="plugin-xsltparams" path="topics/plugin-xsltparams.html"/>
+   <appContext helpID="plugin-javalib" path="topics/plugin-javalib.html"/>
+   <appContext helpID="plugin-messages" path="topics/plugin-messages.html"/>
+   <appContext helpID="plugin-newextensions" path="topics/plugin-newextensions.html"/>
+   <appContext helpID="plugin-sample" path="topics/plugin-sample.html"/>
+   <appContext helpID="best-practices-pdf-customization-plugins"
+               path="topics/plugin-best-practices.html"/>
+   <appContext helpID="ID" path="topics/plugin-coding-conventions.html"/>
+   <appContext helpID="plugin-extension-points"
+               path="extension-points/plugin-extension-points.html"/>
+   <appContext helpID="all-extension-points"
+               path="extension-points/all-extension-points.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="plugin-extension-points-pre-processing"
+               path="extension-points/plugin-extension-points-pre-processing.html"/>
+   <appContext helpID="plugin-extension-points-xslt-import"
+               path="extension-points/plugin-extension-points-xslt-import.html"/>
+   <appContext helpID="plugin-extension-points-xslt-parameters"
+               path="extension-points/plugin-extension-points-xslt-parameters.html"/>
+   <appContext helpID="plugin-support"
+               path="extension-points/plugin-extension-points-support.html"/>
+   <appContext helpID="extension-points-by-plugin"
+               path="extension-points/extension-points-by-plugin.html"/>
+   <appContext helpID="org.dita.base-ext"
+               path="extension-points/extension-points-in-org.dita.base.html"/>
+   <appContext helpID="org.dita.eclipsehelp-ext"
+               path="extension-points/extension-points-in-org.dita.eclipsehelp.html"/>
+   <appContext helpID="org.dita.html5-ext"
+               path="extension-points/extension-points-in-org.dita.html5.html"/>
+   <appContext helpID="org.dita.htmlhelp-ext"
+               path="extension-points/extension-points-in-org.dita.htmlhelp.html"/>
+   <appContext helpID="org.dita.pdf2-ext"
+               path="extension-points/extension-points-in-org.dita.pdf2.html"/>
+   <appContext helpID="org.dita.troff-ext"
+               path="extension-points/extension-points-in-org.dita.troff.html"/>
+   <appContext helpID="org.dita.xhtml-ext"
+               path="extension-points/extension-points-in-org.dita.xhtml.html"/>
+   <appContext helpID="ID" path="topics/migration.html"/>
+   <appContext helpID="migrating-to-3.1" path="topics/migrating-to-3.1.html"/>
+   <appContext helpID="migrating-to-3.0" path="topics/migrating-to-3.0.html"/>
+   <appContext helpID="migrating-to-2.5" path="topics/migrating-to-2.5.html"/>
+   <appContext helpID="migrating-to-2.4" path="topics/migrating-to-2.4.html"/>
+   <appContext helpID="migrating-to-2.3" path="topics/migrating-to-2.3.html"/>
+   <appContext helpID="migrating-to-2.2" path="topics/migrating-to-2.2.html"/>
+   <appContext helpID="migrating-to-2.1" path="topics/migrating-to-2.1.html"/>
+   <appContext helpID="migrating-to-2.0" path="topics/migrating-to-2.0.html"/>
+   <appContext helpID="ID" path="topics/migrating-to-1.8.html"/>
+   <appContext helpID="ID" path="topics/migrating-to-1.7.html"/>
+   <appContext helpID="flagging-migration" path="reference/flagging-migration.html"/>
+   <appContext helpID="ID" path="topics/migrating-to-1.6.html"/>
+   <appContext helpID="ID" path="topics/migrating-to-1.5.4.html"/>
+   <appContext helpID="rebuilding-the-dita-ot-documentation"
+               path="topics/rebuilding-the-dita-ot-documentation.html"/>
+   <appContext helpID="task_pd3_vdv_qg" path="topics/troubleshooting-overview.html"/>
+   <appContext helpID="loghandling" path="topics/log-files.html"/>
+   <appContext helpID="msgs" path="topics/DITA-messages.html"/>
+   <appContext helpID="troubleshooting" path="topics/other-errors.html"/>
+   <appContext helpID="accessing-help-from-the-cl-tool"
+               path="topics/dita-command-help.html"/>
+   <appContext helpID="t-enabling-debug-mode" path="topics/enabling-debug-mode.html"/>
+   <appContext helpID="t-increasing-the-JVM" path="topics/increasing-the-jvm.html"/>
+   <appContext helpID="reducing-processing-time"
+               path="topics/reducing-processing-time.html"/>
+   <appContext helpID="reference" path="reference/index.html"/>
+   <appContext helpID="ditaotarch" path="reference/architecture.html"/>
+   <appContext helpID="processing-structure"
+               path="reference/processing-structure.html"/>
+   <appContext helpID="ID" path="reference/map-first-preprocessing.html"/>
+   <appContext helpID="processing-pipeline-modules"
+               path="reference/processing-pipeline-modules.html"/>
+   <appContext helpID="processing-order" path="reference/processing-order.html"/>
+   <appContext helpID="preprocessarch" path="reference/preprocessing.html"/>
+   <appContext helpID="preprocess-genlist" path="reference/preprocess-genlist.html"/>
+   <appContext helpID="preprocess-debugfilter"
+               path="reference/preprocess-debugfilter.html"/>
+   <appContext helpID="preprocess-mapref" path="reference/preprocess-mapref.html"/>
+   <appContext helpID="preprocess-branch-filter"
+               path="reference/preprocess-branch-filter.html"/>
+   <appContext helpID="preprocess-copyfiles"
+               path="reference/preprocess-copyfiles.html"/>
+   <appContext helpID="preprocess-keyref" path="reference/preprocess-keyref.html"/>
+   <appContext helpID="preprocess-copy-to" path="reference/preprocess-copy-to.html"/>
+   <appContext helpID="preprocess-conrefpush"
+               path="reference/preprocess-conrefpush.html"/>
+   <appContext helpID="preprocess-conref" path="reference/preprocess-conref.html"/>
+   <appContext helpID="preprocess-profile" path="reference/preprocess-profile.html"/>
+   <appContext helpID="preprocess-topic-fragment"
+               path="reference/preprocess-topic-fragment.html"/>
+   <appContext helpID="preprocess-chunk" path="reference/preprocess-chunk.html"/>
+   <appContext helpID="preprocess-metadata" path="reference/preprocess-metadata.html"/>
+   <appContext helpID="preprocess-maplink" path="reference/preprocess-maplink.html"/>
+   <appContext helpID="preprocess-topicpull"
+               path="reference/preprocess-topicpull.html"/>
+   <appContext helpID="flagging" path="reference/preprocess-flagging.html"/>
+   <appContext helpID="preprocess-clean-map"
+               path="reference/preprocess-clean-map.html"/>
+   <appContext helpID="xhtmlwithnavigation" path="reference/XhtmlWithNavigation.html"/>
+   <appContext helpID="XhtmlCommon" path="reference/XhtmlCommon.html"/>
+   <appContext helpID="xhtmldefault" path="reference/XhtmlDefault.html"/>
+   <appContext helpID="ID" path="reference/html5.html"/>
+   <appContext helpID="xhtmleclipse" path="reference/XhtmlEclipse.html"/>
+   <appContext helpID="xhtmltocjs" path="reference/XhtmlTocjs.html"/>
+   <appContext helpID="xhtmlchm" path="reference/XhtmlCHM.html"/>
+   <appContext helpID="pdfdefault" path="reference/pdf-transform.html"/>
+   <appContext helpID="history-pdf-transformation"
+               path="reference/pdf-transformation-history.html"/>
+   <appContext helpID="dita-spec-support" path="reference/DITA_spec-support.html"/>
+   <appContext helpID="dita1.2specification" path="reference/DITA_v1-2-support.html"/>
+   <appContext helpID="dita-13-spec-support" path="reference/DITA_v1-3-support.html"/>
+   <appContext helpID="implementation-dependent-features"
+               path="reference/implementation-dependent-features.html"/>
+   <appContext helpID="code-reference" path="reference/extended-functionality.html"/>
+   <appContext helpID="ID" path="reference/DITA-features-in-docs.html"/>
+   <appContext helpID="API" path="reference/java-api.html"/>
+   <appContext helpID="ID" path="reference/license.html"/>
+   <appContext helpID="third-party-software"
+               path="reference/third-party-software.html"/>
+   <appContext helpID="ID" path="topics/dita-and-dita-ot-resources.html"/>
+   <appContext helpID="ID" path="topics/web-based-resources.html"/>
+   <appContext helpID="ID" path="release-notes/index.html"/>
+   <appContext helpID="using-command-line-tool"
+               path="topics/build-using-dita-command.html"/>
+   <appContext helpID="dita-command-properties"
+               path="parameters/dita-command-arguments.html"/>
+   <appContext helpID="accessing-help-from-the-cl-tool"
+               path="topics/dita-command-help.html"/>
+   <appContext helpID="dita-ot-ant-properties" path="parameters/parameters_intro.html"/>
+   <appContext helpID="ant-properties" path="parameters/internal-ant-properties.html"/>
+   <appContext helpID="using-command-line-tool"
+               path="topics/first-build-using-dita-command.html"/>
+   <appContext helpID="using-command-line-tool"
+               path="topics/build-using-dita-command.html"/>
+   <appContext helpID="dita-command-properties"
+               path="parameters/dita-command-arguments.html"/>
+   <appContext helpID="dita-ot-ant-properties" path="parameters/parameters_intro.html"/>
+   <appContext helpID="using-dita-properties-file"
+               path="topics/using-dita-properties-file.html"/>
+   <appContext helpID="DITA-ant" path="topics/publishing-with-ant.html"/>
+   <appContext helpID="ant" path="topics/ant.html"/>
+   <appContext helpID="runant" path="topics/building-with-ant.html"/>
+   <appContext helpID="creating-an-ant-build-script"
+               path="topics/creating-an-ant-build-script.html"/>
+   <appContext helpID="migrating-ant-to-dita" path="topics/migrating-ant-to-dita.html"/>
+   <appContext helpID="customizing-pdf-output" path="topics/pdf-customization.html"/>
+   <appContext helpID="pdf_customization_approaches"
+               path="topics/pdf-customization-approaches.html"/>
+   <appContext helpID="best-practices-pdf-customization-plugins"
+               path="topics/plugin-best-practices.html"/>
+   <appContext helpID="ID" path="topics/plugin-coding-conventions.html"/>
+   <appContext helpID="best-practices-pdf-customization-plugins"
+               path="topics/plugin-best-practices.html"/>
+   <appContext helpID="ID" path="topics/plugin-coding-conventions.html"/>
+   <appContext helpID="plugin-xmlcatalog" path="topics/plugin-xmlcatalog.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="plugin-anttarget" path="topics/plugin-anttarget.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="plugin-antpreprocess" path="topics/plugin-antpreprocess.html"/>
+   <appContext helpID="plugin-extension-points-pre-processing"
+               path="extension-points/plugin-extension-points-pre-processing.html"/>
+   <appContext helpID="plugin-newtranstype" path="topics/plugin-newtranstype.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="plugin-overridestyle" path="topics/plugin-overridestyle.html"/>
+   <appContext helpID="plugin-extension-points-xslt-import"
+               path="extension-points/plugin-extension-points-xslt-import.html"/>
+   <appContext helpID="plugin-xsltparams" path="topics/plugin-xsltparams.html"/>
+   <appContext helpID="plugin-extension-points-xslt-parameters"
+               path="extension-points/plugin-extension-points-xslt-parameters.html"/>
+   <appContext helpID="plugin-javalib" path="topics/plugin-javalib.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="plugin-messages" path="topics/plugin-messages.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="plugin-configfile" path="topics/plugin-configfile.html"/>
+   <appContext helpID="plugin-newextensions" path="topics/plugin-newextensions.html"/>
+   <appContext helpID="preprocess-chunk" path="reference/preprocess-chunk.html"/>
+   <appContext helpID="preprocess-topic-fragment"
+               path="reference/preprocess-topic-fragment.html"/>
+   <appContext helpID="code-reference" path="reference/extended-functionality.html"/>
+   <appContext helpID="plugins-installing" path="topics/plugins-installing.html"/>
+   <appContext helpID="plugins-removing" path="topics/plugins-removing.html"/>
+   <appContext helpID="dita-command-properties"
+               path="parameters/dita-command-arguments.html"/>
+   <appContext helpID="extension-points-by-plugin"
+               path="extension-points/extension-points-by-plugin.html"/>
+   <appContext helpID="msgs" path="topics/DITA-messages.html"/>
+   <appContext helpID="dita-ot-ant-properties" path="parameters/parameters_intro.html"/>
+   <appContext helpID="rebuilding-the-dita-ot-documentation"
+               path="topics/rebuilding-the-dita-ot-documentation.html"/>
+   <appContext helpID="plugin-addgeneratedtext"
+               path="topics/plugin-addgeneratedtext.html"/>
+   <appContext helpID="dita-globalization-languages"
+               path="topics/globalization-languages.html"/>
+   <appContext helpID="ant" path="topics/ant.html"/>
+   <appContext helpID="runant" path="topics/building-with-ant.html"/>
+   <appContext helpID="creating-an-ant-build-script"
+               path="topics/creating-an-ant-build-script.html"/>
+   <appContext helpID="dita-ot-ant-properties" path="parameters/parameters_intro.html"/>
+   <appContext helpID="dita2eclipsehelp" path="topics/dita2eclipsehelp.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="eclipsehelp" path="parameters/parameters-eclipsehelp.html"/>
+   <appContext helpID="dita2htmlhelp" path="topics/dita2htmlhelp.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="htmlhelp" path="parameters/parameters-htmlhelp.html"/>
+   <appContext helpID="dita2pdf" path="topics/dita2pdf.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="pdf" path="parameters/parameters-pdf.html"/>
+   <appContext helpID="dita2xhtml" path="topics/dita2xhtml.html"/>
+   <appContext helpID="custom-html-parameters"
+               path="topics/html-customization-parameters.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="xhtml" path="parameters/parameters-xhtml.html"/>
+   <appContext helpID="dita2html5" path="topics/dita2html5.html"/>
+   <appContext helpID="custom-html-parameters"
+               path="topics/html-customization-parameters.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="html5" path="parameters/parameters-html5.html"/>
+   <appContext helpID="markdown" path="topics/dita2markdown.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="normalized-dita" path="topics/dita2dita.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="dita2tocjs" path="topics/dita2tocjs.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="dita2troff" path="topics/dita2troff.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="custom-html-plugin-bundle-css"
+               path="topics/html-customization-plugin-bundle-css.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="t-increasing-the-JVM" path="topics/increasing-the-jvm.html"/>
+   <appContext helpID="ant-parameters-other" path="parameters/parameters-other.html"/>
+   <appContext helpID="troubleshooting" path="topics/other-errors.html"/>
+   <appContext helpID="eclipsehelp" path="parameters/parameters-eclipsehelp.html"/>
+   <appContext helpID="htmlhelp" path="parameters/parameters-htmlhelp.html"/>
+   <appContext helpID="pdf" path="parameters/parameters-pdf.html"/>
+   <appContext helpID="xhtml" path="parameters/parameters-xhtml.html"/>
+   <appContext helpID="base" path="parameters/parameters-base.html"/>
+   <appContext helpID="dita2eclipsehelp" path="topics/dita2eclipsehelp.html"/>
+   <appContext helpID="dita2html5" path="topics/dita2html5.html"/>
+   <appContext helpID="dita2htmlhelp" path="topics/dita2htmlhelp.html"/>
+   <appContext helpID="dita2xhtml" path="topics/dita2xhtml.html"/>
+   <appContext helpID="ID" path="parameters/generate-copy-outer.html"/>
+   <appContext helpID="dita2pdf" path="topics/dita2pdf.html"/>
+   <appContext helpID="concept_gsc_vcf_vs"
+               path="topics/pdf2-creating-change-bars.html"/>
+   <appContext helpID="base-html" path="parameters/parameters-base-html.html"/>
+   <appContext helpID="eclipsehelp" path="parameters/parameters-eclipsehelp.html"/>
+   <appContext helpID="html5" path="parameters/parameters-html5.html"/>
+   <appContext helpID="htmlhelp" path="parameters/parameters-htmlhelp.html"/>
+   <appContext helpID="xhtml" path="parameters/parameters-xhtml.html"/>
+   <appContext helpID="troubleshooting" path="topics/other-errors.html"/>
+   <appContext helpID="ant-parameters-other" path="parameters/parameters-other.html"/>
+   <appContext helpID="org.dita.base-ext"
+               path="extension-points/extension-points-in-org.dita.base.html"/>
+   <appContext helpID="plugin-extension-points-pre-processing"
+               path="extension-points/plugin-extension-points-pre-processing.html"/>
+   <appContext helpID="plugin-support"
+               path="extension-points/plugin-extension-points-support.html"/>
+   <appContext helpID="plugin-general-extension-points"
+               path="extension-points/plugin-extension-points-general.html"/>
+   <appContext helpID="custom-html-css" path="topics/html-customization-css.html"/>
+   <appContext helpID="custom-html-plugin-bundle-css"
+               path="topics/html-customization-plugin-bundle-css.html"/>
+   <appContext helpID="dita2eclipsehelp" path="topics/dita2eclipsehelp.html"/>
+   <appContext helpID="dita-globalization" path="topics/globalization.html"/>
+   <appContext helpID="plugin-configfile" path="topics/plugin-configfile.html"/>
+   <appContext helpID="plugin-newtranstype" path="topics/plugin-newtranstype.html"/>
+   <appContext helpID="plugin-sample" path="topics/plugin-sample.html"/>
+   <appContext helpID="dita2pdf-customization"
+               path="topics/pdf-customization-example.html"/>
+   <appContext helpID="plugin-antpreprocess" path="topics/plugin-antpreprocess.html"/>
+   <appContext helpID="plugin-anttarget" path="topics/plugin-anttarget.html"/>
+   <appContext helpID="plugin-javalib" path="topics/plugin-javalib.html"/>
+   <appContext helpID="plugin-messages" path="topics/plugin-messages.html"/>
+   <appContext helpID="plugin-newtranstype" path="topics/plugin-newtranstype.html"/>
+   <appContext helpID="plugin-overridestyle" path="topics/plugin-overridestyle.html"/>
+   <appContext helpID="plugin-xmlcatalog" path="topics/plugin-xmlcatalog.html"/>
+   <appContext helpID="plugin-xsltparams" path="topics/plugin-xsltparams.html"/>
+   <appContext helpID="plugins-installing" path="topics/plugins-installing.html"/>
+   <appContext helpID="troubleshooting" path="topics/other-errors.html"/>
+   <appContext helpID="ID" path="release-notes/index.html"/>
+   <appContext helpID="installing-client" path="topics/installing-client.html"/>
+</map>
