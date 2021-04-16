@@ -1,0 +1,176 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="21.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta charset="UTF-8" /><meta name="copyright" content="(C) Copyright 2021" /><meta name="DC.rights.owner" content="(C) Copyright 2021" /><meta name="DC.Type" content="concept" /><meta name="description" content="The PDF (formerly known as PDF2) transformation process runs the pre-processing routine and follows it by a series of additional targets. These steps work together to create a merged set of content, convert the merged content to XSL-FO, and then format the XSL-FO file to PDF." /><meta name="DC.Relation" scheme="URI" content="../reference/architecture.html" /><meta name="DC.Relation" scheme="URI" content="../reference/pdf-transformation-history.html" /><meta name="prodname" content="DITA Open Toolkit" /><meta name="prodname" content="DITA Open Toolkit" /><meta name="version" content="" /><meta name="version" content="" /><meta name="DC.Format" content="HTML5" /><meta name="DC.Identifier" content="pdfdefault" /><meta name="DC.Language" content="en-US" />        
+      <title>PDF processing modules</title><!--  Generated with Oxygen version 21.0, build number 2019032613.  --><meta name="wh-path2root" content="../" /><meta name="wh-toc-id" content="pdfdefault-d50e3645" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2019032613" /><script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script><script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen.css?buildId=2019032613" /><link rel="stylesheet" type="text/css" href="../css/custom.css" /></head>
+
+    <body id="pdfdefault" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">DITA Open Toolkit <span class="keyword">3.1</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu "><ul xmlns:xhtml="http://www.w3.org/1999/xhtml" role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="installing-client-d50e31-mi" data-tocid="installing-client-d50e31" data-state="not-ready" class=" topicref " data-id="installing-client"><span class="title"><a href="../topics/installing-client.html">Installing DITA-OT</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="alternative-authoring-formats-d50e129-mi" data-tocid="alternative-authoring-formats-d50e129" data-state="not-ready" class=" topicref " data-id="alternative-authoring-formats"><span class="title"><a href="../topics/alternative-input-formats.html">Authoring formats</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tranforming-dita-content-d50e227-mi" data-tocid="tranforming-dita-content-d50e227" data-state="not-ready" class=" topicref " data-id="tranforming-dita-content"><span class="title"><a href="../topics/building-output.html">Building output</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ID-d50e661-mi" data-tocid="ID-d50e661" data-state="not-ready" class=" topicref " data-id="ID"><span class="title"><a href="../parameters/index.html">Setting parameters</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="extending-the-ot-d50e1048-mi" data-tocid="extending-the-ot-d50e1048" data-state="not-ready" class=" topicref " data-id="extending-the-ot"><span class="title"><a href="../topics/extending-the-ot.html">Customizing DITA-OT</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="task_pd3_vdv_qg-d50e2703-mi" data-tocid="task_pd3_vdv_qg-d50e2703" data-state="not-ready" class=" topicref " data-id="task_pd3_vdv_qg"><span class="title"><a href="../topics/troubleshooting-overview.html">Troubleshooting</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="reference-d50e2881-mi" data-tocid="reference-d50e2881" data-state="not-ready" class=" topicref " data-id="reference"><span class="title"><a href="../reference/index.html">Reference</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ID-d50e3897-mi" data-tocid="ID-d50e3897" data-state="not-ready" class=" topicref " data-id="ID"><span class="title"><a href="../topics/dita-and-dita-ot-resources.html">Resources</a></span></span></li><li role="menuitem"><span id="ID-d50e3939-mi" data-tocid="ID-d50e3939" data-state="leaf" class=" topicref " data-id="ID"><span class="title"><a href="../release-notes/index.html">Release Notes</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class=" wh_search_input "><form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required" /><button type="submit" class="wh_search_button" aria-label="Search"><span>Search</span></button></div></form></div>
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref" data-id="reference"><span class="title"><a href="../reference/index.html">Reference</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <cite class="cite">Reference</cite> topics provide more advanced information about the DITA-OT architecture, API         and specification support, and licensing.</p></span></span></span></li><li><span class="topicref" data-id="ditaotarch"><span class="title"><a href="../reference/architecture.html">DITA-OT architecture</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA Open Toolkit is an open-source implementation of the OASIS specification for the Darwin     Information Typing Architecture. The toolkit uses Ant, XSLT, and Java to transform DITA content (maps and     topics) into different deliverable formats.</p></span></span></span></li><li class="active"><span class="topicref" data-id="pdfdefault"><span class="title"><a href="../reference/pdf-transform.html">PDF processing modules</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <span class="keyword option">PDF</span> (formerly known as <span class="keyword option">PDF2</span>) transformation process runs the     pre-processing routine and follows it by a series of additional targets. These steps work together to create a     merged set of content, convert the merged content to XSL-FO, and then format the XSL-FO file to PDF.</p></span></span></span></li></ol></div>
+
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="reference-d50e2881" class="topicref" data-id="reference" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action reference-d50e2881-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/index.html" id="reference-d50e2881-link">Reference</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <cite class="cite">Reference</cite> topics provide more advanced information about the DITA-OT architecture, API         and specification support, and licensing.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="ditaotarch-d50e2905" class="topicref" data-id="ditaotarch" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action ditaotarch-d50e2905-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/architecture.html" id="ditaotarch-d50e2905-link">DITA-OT architecture</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA Open Toolkit is an open-source implementation of the OASIS specification for the Darwin     Information Typing Architecture. The toolkit uses Ant, XSLT, and Java to transform DITA content (maps and     topics) into different deliverable formats.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem"><span data-tocid="processing-structure-d50e2926" class="topicref" data-id="processing-structure" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/processing-structure.html" id="processing-structure-d50e2926-link">Processing structure</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA-OT implements a multi-stage, map-driven architecture to process DITA content. Each stage in the     process examines some or all of the content; some stages result in temporary files that are used by later steps,     while others stages result in updated copies of the DITA content. Most of the processing takes place in a temporary     working directory; the source files themselves are never modified.</p></span></span></span></li><li role="treeitem"><span data-tocid="ID-d50e2947" class="topicref" data-id="ID" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/map-first-preprocessing.html" id="ID-d50e2947-link">Map-first preprocessing</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">DITA-OT 3.0 provides a map-first preprocessing option as an alternative to       the default <code class="ph codeph">preprocess</code> operation. The method, which was introduced in DITA-OT 2.5 as an       experimental feature, has been improved and is ready for use in many production scenarios. Map-first-preprocessing       provides the same functionality as the default <code class="ph codeph">preprocess</code>, but takes a different     approach.</span></p></span></span></span></li><li role="treeitem"><span data-tocid="processing-pipeline-modules-d50e2975" class="topicref" data-id="processing-pipeline-modules" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/processing-pipeline-modules.html" id="processing-pipeline-modules-d50e2975-link">Processing modules</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA-OT processing pipeline is implemented using Ant. Individual modules within the Ant script are     implemented in either Java or XSLT, depending on such factors as performance or requirements for customization.     Virtually all Ant and XSLT modules can be extended by adding a plug-in to the toolkit; new Ant targets may be     inserted before or after common processing, and new rules may be imported into common XSLT modules to override     default processing.</p></span></span></span></li><li role="treeitem"><span data-tocid="processing-order-d50e2996" class="topicref" data-id="processing-order" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/processing-order.html" id="processing-order-d50e2996-link">Processing order</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The order of processing is often significant when evaluating DITA content. Although the DITA specification     does not mandate a specific order for processing, the DITA-OT has determined that performing filtering before conref     resolution best meets user expectations. Switching the order of processing, while legal, may give different results. </p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="preprocessarch-d50e3017" class="topicref" data-id="preprocessarch" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action preprocessarch-d50e3017-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/preprocessing.html" id="preprocessarch-d50e3017-link">Pre-processing modules</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The pre-processing operation is a set of steps that typically runs at the beginning of every DITA-OT     transformation. Each step or stage corresponds to an Ant target in the build pipeline; the       <code class="ph codeph">preprocess</code> target calls the entire set of steps.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="xhtmlwithnavigation-d50e3471" class="topicref" data-id="xhtmlwithnavigation" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action xhtmlwithnavigation-d50e3471-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/XhtmlWithNavigation.html" id="xhtmlwithnavigation-d50e3471-link">HTML-based processing modules</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA-OT ships with several varieties of HTML output, each of which follows roughly the same path     through the processing pipeline. All HTML-based transformation begin with the same call to the pre-processing     module, after which they generate HTML files and then branch to create the transformation-specific navigation     files.</p></span></span></span></li><li role="treeitem" aria-expanded="true" class="active"><span data-tocid="pdfdefault-d50e3645" class="topicref" data-id="pdfdefault" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action pdfdefault-d50e3645-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/pdf-transform.html" id="pdfdefault-d50e3645-link">PDF processing modules</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <span class="keyword option">PDF</span> (formerly known as <span class="keyword option">PDF2</span>) transformation process runs the     pre-processing routine and follows it by a series of additional targets. These steps work together to create a     merged set of content, convert the merged content to XSL-FO, and then format the XSL-FO file to PDF.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem"><span data-tocid="history-pdf-transformation-d50e3672" class="topicref" data-id="history-pdf-transformation" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/pdf-transformation-history.html" id="history-pdf-transformation-d50e3672-link">History of the PDF transformation</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA Open Toolkit PDF transformation was originally based on a third-party contribution by Idiom     Technologies, and is commonly known as the “pdf2” plug-in.</p></span></span></span></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><span data-tocid="dita-spec-support-d50e3693" class="topicref" data-id="dita-spec-support" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action dita-spec-support-d50e3693-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/DITA_spec-support.html" id="dita-spec-support-d50e3693-link">DITA specification support</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA Open Toolkit <span class="keyword">3.1</span> supports all versions of the OASIS DITA specification,     including 1.0, 1.1, 1.2, and 1.3.</p></span></span></span></li><li role="treeitem"><span data-tocid="API-d50e3829" class="topicref" data-id="API" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/java-api.html" id="API-d50e3829-link">Java API</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA-OT includes a Java Application Programming Interface to allow developers to embed DITA-OT more easily     into other Java programs.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="ID-d50e3850" class="topicref" data-id="ID" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action ID-d50e3850-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/license.html" id="ID-d50e3850-link">License</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">     <span class="ph">DITA Open Toolkit is released under the Apache License, Version 2.0.</span>   </p></span></span></span></li></ul></li></ul></div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">PDF processing modules</h1>
+  
+  <div class="body conbody"><p class="shortdesc">The <span class="keyword option">PDF</span> (formerly known as <span class="keyword option">PDF2</span>) transformation process runs the
+    pre-processing routine and follows it by a series of additional targets. These steps work together to create a
+    merged set of content, convert the merged content to XSL-FO, and then format the XSL-FO file to PDF.</p>
+    <section class="section">
+      <p class="p">The PDF process includes many Ant targets. During a typical conversion from map to PDF, the following targets
+        are most significant.</p>
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><code class="ph codeph">map2pdf2</code></dt>
+          <dd class="dd">Creates a merged file by calling a common Java merge module. It then calls the
+              <code class="ph codeph">publish.map.pdf</code> target to do the remainder of the work.</dd>
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">publish.map.pdf</code></dt>
+          <dd class="dd">Performs some initialization and then calls the <code class="ph codeph">transform.topic2pdf</code> target to do the
+            remainder of processing.</dd>
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.topic2pdf</code></dt>
+          <dd class="dd">Converts the merged file to XSL-FO, generates the PDF, and deletes the <span class="ph filepath">topic.fo</span> file,
+            unless instructed to keep it.</dd>
+        
+      </dl>
+      <p class="p">The <code class="ph codeph">transform.topic2pdf</code> target uses the following targets to perform those tasks:</p>
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.topic2fo</code></dt>
+          <dd class="dd">Convert the merged file to an XSL-FO file. This process is composed of several sub-targets. </dd>
+        
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.topic2fo.index</code></dt>
+          <dd class="dd">Runs a Java process to set up index processing, based on the document language. This step generates the
+            file <span class="ph filepath">stage1.xml</span> in the temporary processing directory. </dd>
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.topic2fo.flagging</code></dt>
+          <dd class="dd">Sets up preprocessing for flagging based on a DITAVAL file. This step generates the file
+              <span class="ph filepath">stage1a.xml</span> in the temporary processing directory.</dd>
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.topic2fo.main</code></dt>
+          <dd class="dd">Does the bulk of the conversion from DITA to XSL-FO. It runs the XSLT-based process that creates
+              <span class="ph filepath">stage2.fo</span> in the temporary processing directory</dd>
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.topic2fo.i18n</code></dt>
+          <dd class="dd">Does additional localization processing on the FO file; it runs a Java process that converts
+              <span class="ph filepath">stage2.fo</span> into <span class="ph filepath">stage3.fo</span>, followed by an XSLT process that
+            converts <span class="ph filepath">stage3.fo</span> into <span class="ph filepath">topic.fo</span>.</dd>
+        
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">transform.fo2pdf</code></dt>
+          <dd class="dd">Converts the <span class="ph filepath">topic.fo</span> file into PDF using the specified FO processor (Antenna House,
+            XEP, or Apache FOP).</dd>
+        
+        
+          <dt class="dt dlterm"><code class="ph codeph">delete.fo2pdf.topic.fo</code></dt>
+          <dd class="dd">Deletes the <span class="ph filepath">topic.fo</span> file, unless otherwise specified by setting an Ant property or
+            command-line option.</dd>
+        
+      </dl>
+    </section>
+  </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="21.0">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+    </body>
+</html>

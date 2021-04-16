@@ -1,0 +1,252 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="21.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta charset="UTF-8" /><meta name="copyright" content="(C) Copyright 2021" /><meta name="DC.rights.owner" content="(C) Copyright 2021" /><meta name="DC.Type" content="reference" /><meta name="description" content="DITA-OT provides additional processing support beyond that which is mandated by the DITA specification. These extensions can be used to define character encodings or line ranges for code references, normalize indendation, add line numbers or display whitespace characters in code blocks." /><meta name="DC.Relation" scheme="URI" content="../reference/DITA_spec-support.html" /><meta name="DC.Relation" scheme="URI" content="../reference/preprocess-topic-fragment.html" /><meta name="prodname" content="DITA Open Toolkit" /><meta name="prodname" content="DITA Open Toolkit" /><meta name="version" content="" /><meta name="version" content="" /><meta name="DC.Format" content="HTML5" /><meta name="DC.Identifier" content="code-reference" />        
+      <title>Extended codeblock processing</title><!--  Generated with Oxygen version 21.0, build number 2019032613.  --><meta name="wh-path2root" content="../" /><meta name="wh-toc-id" content="code-reference-d50e3787" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2019032613" /><script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script><script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen.css?buildId=2019032613" /><link rel="stylesheet" type="text/css" href="../css/custom.css" /></head>
+
+    <body id="code-reference" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">DITA Open Toolkit <span class="keyword">3.1</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu "><ul xmlns:xhtml="http://www.w3.org/1999/xhtml" role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="installing-client-d50e31-mi" data-tocid="installing-client-d50e31" data-state="not-ready" class=" topicref " data-id="installing-client"><span class="title"><a href="../topics/installing-client.html">Installing DITA-OT</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="alternative-authoring-formats-d50e129-mi" data-tocid="alternative-authoring-formats-d50e129" data-state="not-ready" class=" topicref " data-id="alternative-authoring-formats"><span class="title"><a href="../topics/alternative-input-formats.html">Authoring formats</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tranforming-dita-content-d50e227-mi" data-tocid="tranforming-dita-content-d50e227" data-state="not-ready" class=" topicref " data-id="tranforming-dita-content"><span class="title"><a href="../topics/building-output.html">Building output</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ID-d50e661-mi" data-tocid="ID-d50e661" data-state="not-ready" class=" topicref " data-id="ID"><span class="title"><a href="../parameters/index.html">Setting parameters</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="extending-the-ot-d50e1048-mi" data-tocid="extending-the-ot-d50e1048" data-state="not-ready" class=" topicref " data-id="extending-the-ot"><span class="title"><a href="../topics/extending-the-ot.html">Customizing DITA-OT</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="task_pd3_vdv_qg-d50e2703-mi" data-tocid="task_pd3_vdv_qg-d50e2703" data-state="not-ready" class=" topicref " data-id="task_pd3_vdv_qg"><span class="title"><a href="../topics/troubleshooting-overview.html">Troubleshooting</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="reference-d50e2881-mi" data-tocid="reference-d50e2881" data-state="not-ready" class=" topicref " data-id="reference"><span class="title"><a href="../reference/index.html">Reference</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ID-d50e3897-mi" data-tocid="ID-d50e3897" data-state="not-ready" class=" topicref " data-id="ID"><span class="title"><a href="../topics/dita-and-dita-ot-resources.html">Resources</a></span></span></li><li role="menuitem"><span id="ID-d50e3939-mi" data-tocid="ID-d50e3939" data-state="leaf" class=" topicref " data-id="ID"><span class="title"><a href="../release-notes/index.html">Release Notes</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class=" wh_search_input "><form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required" /><button type="submit" class="wh_search_button" aria-label="Search"><span>Search</span></button></div></form></div>
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref" data-id="reference"><span class="title"><a href="../reference/index.html">Reference</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <cite class="cite">Reference</cite> topics provide more advanced information about the DITA-OT architecture, API         and specification support, and licensing.</p></span></span></span></li><li><span class="topicref" data-id="dita-spec-support"><span class="title"><a href="../reference/DITA_spec-support.html">DITA specification support</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA Open Toolkit <span class="keyword">3.1</span> supports all versions of the OASIS DITA specification,     including 1.0, 1.1, 1.2, and 1.3.</p></span></span></span></li><li class="active"><span class="topicref" data-id="code-reference"><span class="title"><a href="../reference/extended-functionality.html">Codeblock extensions</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA-OT provides additional processing support beyond that which is mandated by the DITA specification.     These extensions can be used to define character encodings or line ranges for code references, normalize     indendation, add line numbers or display whitespace characters in code blocks.</p></span></span></span></li></ol></div>
+
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="reference-d50e2881" class="topicref" data-id="reference" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action reference-d50e2881-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/index.html" id="reference-d50e2881-link">Reference</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <cite class="cite">Reference</cite> topics provide more advanced information about the DITA-OT architecture, API         and specification support, and licensing.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="false"><span data-tocid="ditaotarch-d50e2905" class="topicref" data-id="ditaotarch" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action ditaotarch-d50e2905-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/architecture.html" id="ditaotarch-d50e2905-link">DITA-OT architecture</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA Open Toolkit is an open-source implementation of the OASIS specification for the Darwin     Information Typing Architecture. The toolkit uses Ant, XSLT, and Java to transform DITA content (maps and     topics) into different deliverable formats.</p></span></span></span></li><li role="treeitem" aria-expanded="true"><span data-tocid="dita-spec-support-d50e3693" class="topicref" data-id="dita-spec-support" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action dita-spec-support-d50e3693-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/DITA_spec-support.html" id="dita-spec-support-d50e3693-link">DITA specification support</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA Open Toolkit <span class="keyword">3.1</span> supports all versions of the OASIS DITA specification,     including 1.0, 1.1, 1.2, and 1.3.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem"><span data-tocid="dita1.2specification-d50e3717" class="topicref" data-id="dita1.2specification" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/DITA_v1-2-support.html" id="dita1.2specification-d50e3717-link">DITA 1.2 support</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA Open Toolkit <span class="keyword">3.1</span> supports the DITA 1.2 specification. While 1.2 is no longer     the latest version of DITA, the grammar files (DTD and XML Schema) are still included with DITA-OT and content     explicitly created for 1.2 continues to work as intended.</p></span></span></span></li><li role="treeitem"><span data-tocid="dita-13-spec-support-d50e3741" class="topicref" data-id="dita-13-spec-support" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/DITA_v1-3-support.html" id="dita-13-spec-support-d50e3741-link">DITA 1.3 support</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">DITA Open Toolkit <span class="keyword">3.1</span> provides processing support for the       OASIS DITA 1.3 specification. Initial preview support for this specification was added in version 2.0 of the       toolkit; version 2.2 extended this foundation to support key scopes and branch filtering along with additional       DITA 1.3 features.</span></p></span></span></span></li><li role="treeitem"><span data-tocid="implementation-dependent-features-d50e3766" class="topicref" data-id="implementation-dependent-features" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/implementation-dependent-features.html" id="implementation-dependent-features-d50e3766-link">Implementation-dependent features</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">For certain features, the DITA specification allows conforming processors to choose between different     implementation alternatives. In these cases, there may be differences in behavior when DITA content is handled by     different processors. DITA-OT supports implementation-specific features by applying one or more of the permissible     processing approaches.</p></span></span></span></li><li role="treeitem" class="active"><span data-tocid="code-reference-d50e3787" class="topicref" data-id="code-reference" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/extended-functionality.html" id="code-reference-d50e3787-link">Codeblock extensions</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA-OT provides additional processing support beyond that which is mandated by the DITA specification.     These extensions can be used to define character encodings or line ranges for code references, normalize     indendation, add line numbers or display whitespace characters in code blocks.</p></span></span></span></li><li role="treeitem"><span data-tocid="ID-d50e3808" class="topicref" data-id="ID" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/DITA-features-in-docs.html" id="ID-d50e3808-link">DITA features in docs</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The DITA Open Toolkit uses various recent DITA features in the project documentation.</p></span></span></span></li></ul></li><li role="treeitem"><span data-tocid="API-d50e3829" class="topicref" data-id="API" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../reference/java-api.html" id="API-d50e3829-link">Java API</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">DITA-OT includes a Java Application Programming Interface to allow developers to embed DITA-OT more easily     into other Java programs.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="ID-d50e3850" class="topicref" data-id="ID" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action ID-d50e3850-link" class="wh-expand-btn"></span><span class="title"><a href="../reference/license.html" id="ID-d50e3850-link">License</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">     <span class="ph">DITA Open Toolkit is released under the Apache License, Version 2.0.</span>   </p></span></span></span></li></ul></li></ul></div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+
+  <h1 class="title topictitle1" id="ariaid-title1">Extended codeblock processing</h1>
+
+  
+
+  
+
+  <div class="body refbody"><p class="shortdesc">DITA-OT provides additional processing support beyond that which is mandated by the DITA specification.
+    These extensions can be used to define character encodings or line ranges for code references, normalize
+    indendation, add line numbers or display whitespace characters in code blocks.</p>
+    <section class="section" id="code-reference__coderef-charset"><h2 class="title sectiontitle">Character set definition</h2>
+      
+      <p class="p">For <code class="keyword markupname xmlelement">&lt;coderef&gt;</code> elements, DITA-OT supports defining the code reference target file
+        encoding using the <code class="keyword markupname xmlatt">@format</code> attribute. The supported format is:</p>
+      <pre class="pre codeblock"><code>format (";" space* "charset=" charset)?</code></pre>
+      <p class="p">If a character set is not defined, the system default character set will be used. If the character set is not
+        recognized or supported, the <span class="keyword msgnum">DOTJ052E</span> error is thrown and the system default character set is
+        used as a fallback.</p>
+    </section>
+    <div class="example">
+      <pre class="pre codeblock"><code>&lt;coderef href="unicode.txt" format="txt; charset=UTF-8"/&gt;</code></pre>
+    </div>
+    <section class="section"><h2 class="title sectiontitle">Line range extraction</h2>
+      
+      <p class="p">Code references can be limited to extract only a specified line range by defining the
+          <code class="ph codeph">line-range</code> pointer in the URI fragment. The format is:</p>
+      <pre class="pre codeblock"><code>uri ("#line-range(" start ("," end)? ")" )?</code></pre>
+      <p class="p">Start and end line numbers start from 1 and are inclusive. If the end range is omitted, the range ends on the
+        last line of the file.</p>
+    </section>
+    <div class="example">
+      <pre class="pre codeblock"><code>&lt;coderef href="Parser.scala#line-range(5, 10)" format="scala"/&gt;</code></pre>
+      <p class="p">Only lines from 5 to 10 will be included in the output.</p>
+    </div>
+    <section class="section"><h2 class="title sectiontitle">RFC 5147</h2>
+      
+      <p class="p">DITA-OT also supports the line position and range syntax from <a class="xref" href="http://tools.ietf.org/html/rfc5147" target="_blank">RFC 5147</a>. The format for line
+        range is:</p>
+      <pre class="pre codeblock"><code>uri ("#line=" start? "," end? )?</code></pre>
+      <p class="p">Start and end line numbers start from 0 and are inclusive and exclusive, respectively. If the start range is
+        omitted, the range starts from the first line; if the end range is omitted, the range ends on the last line of
+        the file. The format for line position is:</p>
+      <pre class="pre codeblock"><code>uri ("#line=" position )?</code></pre>
+      <p class="p">The position line number starts from 0.</p>
+    </section>
+    <div class="example">
+      <pre class="pre codeblock"><code>&lt;coderef href="Parser.scala#line=4,10" format="scala"/&gt;</code></pre>
+      <p class="p">Only lines from 5 to 10 will be included in the output.</p>
+    </div>
+    <section class="section"><h2 class="title sectiontitle">Line range by content</h2>
+      
+      <p class="p">Instead of specifying line numbers, you can also select lines to include in the code reference by specifying
+        keywords (or “<dfn class="term">tokens</dfn>”) that appear in the referenced file.</p>
+      <div class="div" id="code-reference__coderef-by-content">
+        <p class="p">DITA-OT supports the <code class="ph codeph">token</code> pointer in the URI fragment to extract a line range based on the
+          file content. The format for referencing a range of lines by content is:</p>
+        <pre class="pre codeblock"><code>uri ("#token=" start? ("," end)? )?</code></pre>
+        <p class="p">Lines identified using start and end tokens are exclusive: the lines that contain the start token and end
+          token will be not be included. If the start token is omitted, the range starts from the first line in the
+          file; if the end token is omitted, the range ends on the last line of the file. </p>
+      </div>
+    </section>
+    <div class="example">
+      <p class="p">Given a Haskell source file named <span class="ph filepath">fact.hs</span> with the following content,</p>
+      <pre class="pre codeblock normalize-space show-line-numbers show-whitespace"><code>-- START-FACT
+fact :: Int -&gt; Int
+fact 0 = 1
+fact n = n * fact (n-1)
+-- END-FACT
+main = print $ fact 7</code></pre>
+      <p class="p">a range of lines can be referenced as:</p>
+      <pre class="pre codeblock"><code>&lt;coderef href="fact.hs#token=START-FACT,END-FACT"/&gt;</code></pre>
+      <p class="p">to include the range of lines that follows the <code class="ph codeph">START-FACT</code> token on Line 1, up to (but not
+        including) the line that contains the <code class="ph codeph">END-FACT</code> token (Line 5). The resulting
+          <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code> would contain lines 2–4:</p>
+      <pre class="pre codeblock"><code>fact :: Int -&gt; Int
+fact 0 = 1
+fact n = n * fact (n-1)</code></pre>
+      <div class="note mytip mynote_tip" id="code-reference__coderef-by-content-tip"><span class="mynote__title">Tip:</span> This approach can be used to reference code samples that are
+        frequently edited. In these cases, referencing line ranges by line number can be error-prone, as the target line
+        range for the reference may shift if preceding lines are added or removed. Specifying ranges by line content
+        makes references more robust, as long as the <code class="ph codeph">token</code> keywords are preserved when the referenced
+        resource is modified.</div></div>
+    <div class="bodydiv refbodydiv" id="code-reference__normalize-codeblock-whitespace">
+      <section class="section"><h2 class="title sectiontitle">Whitespace normalization</h2>
+        
+        <p class="p">DITA-OT can adjust the leading whitespace in code blocks to remove excess indentation and keep lines short.
+          Given an XML snippet in a codeblock with lines that all begin with spaces (indicated here as dots “·”),</p>
+      </section>
+      <div class="example">
+        <div class="p"><pre class="pre codeblock"><code>··&lt;subjectdef keys="audience"&gt;
+····&lt;subjectdef keys="novice"/&gt;
+····&lt;subjectdef keys="expert"/&gt;
+··&lt;/subjectdef&gt;</code></pre></div>
+        <p class="p">DITA-OT can remove the leading whitespace that is common to all lines in the code block. To trim the excess
+          space, set the <code class="keyword markupname xmlatt">@outputclass</code> attribute on the <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code> element to
+          include the <code class="ph codeph">normalize-space</code> keyword.</p>
+        <p class="p">In this case, two spaces (“··”) would be removed from the beginning of each line, shifting content to the
+          left by two characters, while preserving the indentation of lines that contain additional whitespace (beyond
+          the common indent):</p>
+        <div class="p"><pre class="pre codeblock"><code>&lt;subjectdef keys="audience"&gt;
+··&lt;subjectdef keys="novice"/&gt;
+··&lt;subjectdef keys="expert"/&gt;
+&lt;/subjectdef&gt;</code></pre></div>
+      </div>
+    </div>
+    <div class="bodydiv refbodydiv" id="code-reference__visualize-codeblock-whitespace">
+      <section class="section"><h2 class="title sectiontitle">Whitespace visualization (PDF)</h2>
+        
+        <p class="p">DITA-OT can be set to display the whitespace characters in code blocks to visualize indentation in PDF
+          output.</p>
+        <p class="p">To enable this feature, set the <code class="keyword markupname xmlatt">@outputclass</code> attribute on the
+            <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code> element to include the <code class="ph codeph">show-whitespace</code> keyword.</p>
+        <p class="p">When PDF output is generated, space characters in the code will be replaced with a middle dot or “interpunct”
+          character ( <code class="ph codeph">·</code> ); tab characters are replaced with a rightwards arrow and three spaces
+            ( <code class="ph codeph">→   </code> ).</p>
+      </section>
+      <div class="example">
+        <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix fig--title-label">Figure<span class="fig--title-label-number"> 1</span>: </span>Sample Java code with visible whitespace characters <em class="ph i">(PDF only)</em></figcaption>
+          
+          <pre class="pre codeblock language-java show-whitespace">	for i in 0..10 {
+		println(i)
+	}</pre>
+        </figure>
+      </div>
+    </div>
+    <div class="bodydiv refbodydiv" id="code-reference__codeblock-line-numbers">
+      <section class="section"><h2 class="title sectiontitle">Line numbering (PDF)</h2>
+        
+        <p class="p">DITA-OT can be set to add line numbers to code blocks to make it easier to distinguish specific lines.</p>
+        <p class="p">To enable this feature, set the <code class="keyword markupname xmlatt">@outputclass</code> attribute on the
+            <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code> element to include the <code class="ph codeph">show-line-numbers</code> keyword.</p>
+      </section>
+      <div class="example">
+        <figure class="fig fignone"><figcaption class="figcap"><span class="figtitleprefix fig--title-label">Figure<span class="fig--title-label-number"> 2</span>: </span>Sample Java code with line numbers and visible whitespace characters <em class="ph i">(PDF only)</em></figcaption>
+          
+          <pre class="pre codeblock language-java show-line-numbers show-whitespace">	for i in 0..10 {
+		println(i)
+	}</pre>
+        </figure>
+      </div>
+    </div>
+  </div>
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist relinfo relconcepts"><strong>Related concepts</strong><br /><ul class="linklist related_link"><li class="linklist"><a class="navheader_parent_path" href="../reference/preprocess-topic-fragment.html" title="The topic-fragment step expands content references to elements in the same topic and resolves references made with the coderef element. This step is implemented in SAX pipes.">Resolve topic fragments and code references (topic-fragment)</a></li></ul></div></nav></div>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="21.0">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+    </body>
+</html>

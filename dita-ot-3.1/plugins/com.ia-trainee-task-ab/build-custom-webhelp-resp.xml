@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project>
+    <target name="dita2ia-webhelp-responsive-ab"
+            depends="dita2custom-webhelp-resp.init,
+               dita2custom-webhelp-resp.copy,
+               dita2webhelp-responsive"/>
+
+    <target name="dita2custom-webhelp-resp.init">
+        <property name="args.css.file" value="css/custom.css"/>
+    </target>
+
+    <target name="dita2custom-webhelp-resp.copy">
+        <copy todir="${output.dir}/css">
+            <fileset dir="${dita.plugin.com.ia-trainee-task-ab.dir}/css"/>
+        </copy>
+    </target>
+
+</project>
