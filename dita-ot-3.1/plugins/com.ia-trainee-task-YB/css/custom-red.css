@@ -1,0 +1,72 @@
+body {
+  color: yellow !important;
+}
+
+.note {
+    color:green
+}
+
+.tip {
+    color:purple
+}
+
+.danger {
+    color:red
+}
+
+.caution {
+    color:orange
+}
+
+/*add parameters for images*/
+.note::before {
+        content:"";
+        background-image: url("../images/pawprint.png");
+        background-size: 20px;
+        background-repeat:no-repeat;
+        margin: 0px;
+        padding-left: 30px;
+        height: 25px;
+        width: 25px;
+        position: relative;
+        display: inline-block;
+}
+
+.tip::before {
+        content:"";
+        background-image: url("../images/cat.png");
+        background-size: 20px;
+        background-repeat:no-repeat;
+        margin: 0px;
+        padding-left: 30px;
+        height: 25px;
+        width: 25px;
+        position: relative;
+        display: inline-block;
+}
+
+.danger::before {
+        content:"";
+        background-image: url("../images/witch-cat.png");
+        background-size: 20px;
+        background-repeat:no-repeat;
+        margin: 0px;
+        padding-left: 30px;
+        height: 25px;
+        width: 25px;
+        position: relative;
+        display: inline-block;
+}
+
+.caution::before {
+        content:"";
+        background-image: url("../images/domestic-cat-shape.png");
+        background-size: 20px;
+        background-repeat:no-repeat;
+        margin: 0px;
+        padding-left: 30px;
+        height: 25px;
+        width: 25px;
+        position: relative;
+        display: inline-block;
+}
