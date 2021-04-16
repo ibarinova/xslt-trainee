@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.ia-trainee-task-YB">
+    <feature extension="dita.conductor.transtype.check" value="ia-webhelp-responsive-YB"/>
+    <feature extension="dita.transtype.print" value="ia-webhelp-responsive-YB"/>
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+    <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
+</plugin>

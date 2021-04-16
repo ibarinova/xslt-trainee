@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+    <target name="dita2ia-webhelp-responsive-YB"
+            depends="dita2webhelp-responsive-YB-custom-css.init,
+               dita2webhelp-responsive-YB-custom-css.copy,
+               dita2webhelp-responsive"/>
+
+    <target name="dita2webhelp-responsive-YB-custom-css.init">
+        <echo> 111 </echo>
+        <property name="args.css.file" value="css/custom-red.css"/>
+    </target>
+
+    <target name="dita2webhelp-responsive-YB-custom-css.copy">
+        <copy file="plugins/com.ia-trainee-task-YB/css/custom-red.css" todir="${output.dir}/css"/>
+        <copy file="plugins/com.ia-trainee-task-YB/css/images/pawprint.png" todir="${output.dir}/images"/>
+        <copy file="plugins/com.ia-trainee-task-YB/css/images/cat.png" todir="${output.dir}/images"/>
+        <copy file="plugins/com.ia-trainee-task-YB/css/images/witch-cat.png" todir="${output.dir}/images"/>
+        <copy file="plugins/com.ia-trainee-task-YB/css/images/domestic-cat-shape.png" todir="${output.dir}/images"/>
+    </target>
+</project>
+
