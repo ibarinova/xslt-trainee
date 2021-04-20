@@ -3,6 +3,8 @@
     <target name="dita2ia-webhelp-responsive-YB"
             depends="dita2webhelp-responsive-YB-custom-css.init,
                dita2webhelp-responsive-YB-custom-css.copy,
+               dita2webhelp-responsive-YB-contain,
+               dita2webhelp-responsive-YB-contain2,
                dita2webhelp-responsive"/>
 
     <target name="dita2webhelp-responsive-YB-custom-css.init">
@@ -16,6 +18,19 @@
         <copy file="plugins/com.ia-trainee-task-YB/css/images/cat.png" todir="${output.dir}/images"/>
         <copy file="plugins/com.ia-trainee-task-YB/css/images/witch-cat.png" todir="${output.dir}/images"/>
         <copy file="plugins/com.ia-trainee-task-YB/css/images/domestic-cat-shape.png" todir="${output.dir}/images"/>
+        <condition property="contain">
+            <contains substring="user" string="${args.input}"/>
+        </condition>
     </target>
+
+
+    <target name="dita2webhelp-responsive-YB-contain" if="contain">
+            <echo message="there is a user!!!!!"/>
+    </target>
+    <target name="dita2webhelp-responsive-YB-contain2" unless="contain">
+            <echo message="there is NO user!!!!!"/>
+    </target>
+
+
 </project>
 
