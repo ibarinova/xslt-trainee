@@ -1,0 +1,80 @@
+body {
+  color: yellow !important;
+}
+
+.note {
+    color:green
+}
+
+.tip {
+    color:purple
+}
+
+.danger {
+    color:red
+}
+
+.caution {
+    color:orange
+}
+
+/*add parameters for images*/
+.note::before {
+        content: "";
+        background-image: url("../images/pawprint.png");
+        background-size: 27px;
+        background-repeat: no-repeat;
+        background-position: 0px 6px;
+        margin: 0px;
+        padding: 30px 15px;
+        height: 5px;
+        width: 15px;
+        position: relative;
+        display: inline-block;
+        float: left;
+}
+
+.tip::before {
+        content:"";
+        background-image: url("../images/cat.png");
+        background-size: 27px;
+        background-repeat: no-repeat;
+        background-position: 0px 6px;
+        margin: 0px;
+        padding: 30px 15px;
+        height: 5px;
+        width: 15px;
+        position: relative;
+        display: inline-block;
+        float: left;
+}
+
+.danger::before {
+        content:"";
+        background-image: url("../images/witch-cat.png");
+         background-size: 27px;
+         background-repeat: no-repeat;
+         background-position: 0px 6px;
+         margin: 0px;
+         padding: 30px 15px;
+         height: 5px;
+         width: 15px;
+         position: relative;
+         display: inline-block;
+         float: left;
+}
+
+.caution::before {
+        content:"";
+        background-image: url("../images/domestic-cat-shape.png");
+         background-size: 27px;
+         background-repeat: no-repeat;
+         background-position: 0px 6px;
+         margin: 0px;
+         padding: 30px 15px;
+         height: 5px;
+         width: 15px;
+         position: relative;
+         display: inline-block;
+         float: left;
+}

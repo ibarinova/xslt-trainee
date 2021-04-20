@@ -6,5 +6,4 @@
     <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
     <feature extension="dita.xsl.html5" file="xsl/step.xsl"/>
     <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
-
 </plugin>

@@ -38,6 +38,16 @@ span.mynote__title{
     background-position: left;
 }
 
+li.stepexpand:nth-child(2n+1){
+    background-color: bisque;
+}
+li.stepexpand:nth-child(2n){
+    background-color: lightblue;
+}
+span.my_substr{
+    font-weight: bold;
+}
+
 
 
 
