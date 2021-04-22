@@ -2,12 +2,15 @@
 .mynote{
     color: green;
 }
+
 .mytip{
     color: purple;
 }
+
 .mydanger{
     color: red;
 }
+
 .mycaution{
     color: orange;
 }
@@ -17,18 +20,32 @@ div.note>span.mynote__title{
     background-image: url("images/sticky-note-solid.svg");
     font-weight: bold;
 }
+
 div.mytip>span.mynote__title{
     background-image: url("images/gratipay-brands.svg");
 }
+
 div.mydanger>span.mynote__title{
     background-image: url("images/exclamation-triangle-solid.svg");
 }
+
 div.mycaution>span.mynote__title{
     background-image: url("images/exclamation-circle-solid.svg");
 }
+
 span.mynote__title{
     padding: 5px 5px 5px 30px;
     background-position: left;
+}
+
+li.stepexpand:nth-child(2n+1){
+    background-color: bisque;
+}
+li.stepexpand:nth-child(2n){
+    background-color: lightblue;
+}
+span.my_substr{
+    font-weight: bold;
 }
 
 

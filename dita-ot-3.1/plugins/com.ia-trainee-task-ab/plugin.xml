@@ -4,4 +4,7 @@
     <feature extension="dita.transtype.print" value="ia-webhelp-responsive-ab"/>
     <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
     <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
+    <feature extension="dita.xsl.html5" file="xsl/step.xsl"/>
+    <feature extension="dita.xsl.html5" file="xsl/task-string.xsl"/>
+    <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
 </plugin>

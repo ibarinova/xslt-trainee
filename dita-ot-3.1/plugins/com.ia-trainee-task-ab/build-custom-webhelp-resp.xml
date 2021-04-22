@@ -4,6 +4,8 @@
     <target name="dita2ia-webhelp-responsive-ab"
             depends="dita2custom-webhelp-resp.init,
                dita2custom-webhelp-resp.copy,
+               dita2check-condition-contain,
+               dita2use-template,
                dita2webhelp-responsive"/>
 
     <target name="dita2custom-webhelp-resp.init">
@@ -16,4 +18,18 @@
         </copy>
     </target>
 
+    <target name="dita2check-condition-contain">
+        <condition property="contains" value="user">
+            <contains string="${args.input}" substring="user1" />
+        </condition>
+        <condition property="contains" value="IdeaProjects">
+            <contains string="${args.input}" substring="IdeaProjects" />
+        </condition>
+        <property name="contains" value="default"/>
+        <echo message="${contains}"/>
+    </target>
+
+    <target name="dita2use-template">
+        <property name="webhelp.publishing.template" value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
+    </target>
 </project>
