@@ -50,4 +50,25 @@ span.my_substr{
 
 
 
+#searchForm{
+    display: flex;
+    flex-direction: row;
+    padding: 0 10%;
+    justify-content: space-between;
+}
+#searchForm>div{
+    width: 35%;
+}
+
+.wh_main_page .wh_search_input{
+    background: none;
+    background-color: orange;
+}
+
+.wh_search_input{
+    background: none;
+    background-color: orange;
+}
+
+
 

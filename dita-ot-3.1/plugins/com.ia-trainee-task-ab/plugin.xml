@@ -6,5 +6,8 @@
     <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
     <feature extension="dita.xsl.html5" file="xsl/step.xsl"/>
     <feature extension="dita.xsl.html5" file="xsl/task-string.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/custom-header.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/custom-header.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/custom-header.xsl"/>
     <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
 </plugin>
