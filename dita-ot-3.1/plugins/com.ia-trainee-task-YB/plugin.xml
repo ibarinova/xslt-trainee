@@ -7,5 +7,17 @@
     <feature extension="dita.conductor.html5.param" file="parameters.xml"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/customBooktitle.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/customBooktitle.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/customBooktitle.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/customBooktitle.xsl"/>
+
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/customTOC.xsl"/><!--
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/customTOC.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/customTOC.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/customTOC.xsl"/>-->
+
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp.param" file="parameters.xml"/>
+
 </plugin>
