@@ -5,4 +5,7 @@
     <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
     <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
     <feature extension="dita.conductor.html5.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/customBooktitle.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/customBooktitle.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/customBooktitle.xsl"/>
 </plugin>
