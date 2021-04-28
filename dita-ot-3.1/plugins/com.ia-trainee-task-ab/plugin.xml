@@ -10,10 +10,10 @@
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/custom-header.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/custom-header.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/custom-header.xsl"/>
-    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/custom-toc.xsl"/>
+<!--    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/custom-toc.xsl"/>-->
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/custom-toc.xsl"/>
-    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/custom-toc.xsl"/>
-    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/custom-toc.xsl"/>
+    <!--<feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/custom-toc.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/custom-toc.xsl"/>-->
 
     <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp.param" file="insertParameters.xml"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage.param" file="insertParameters.xml"/>
