@@ -32,4 +32,5 @@
     <target name="dita2use-template">
         <property name="webhelp.publishing.template" value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
     </target>
+
 </project>
