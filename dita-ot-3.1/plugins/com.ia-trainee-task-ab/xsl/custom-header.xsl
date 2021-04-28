@@ -3,98 +3,97 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:whc="http://www.oxygenxml.com/webhelp/components"
                 xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc">
-
-    <xsl:param name="myString"/>
+    <xsl:param name="currentTranstype"/>
     <!--
             Expand the 'webhelp_search_input' place holder.
         -->
     <xsl:template match="whc:webhelp_search_input" mode="copy_template">
         <!-- EXM-36737 - Context node used for messages localization -->
         <xsl:param name="i18n_context" tunnel="yes" as="element()*"/>
-
-        <xsl:variable name="mapTitle" as="item()*">
-            <xsl:choose>
-                <xsl:when test="exists($toc/toc:title) or exists($toc/@title)">
+        <xsl:choose>
+            <xsl:when test="$currentTranstype = 'ia-webhelp-responsive-ab'">
+                <xsl:variable name="mapTitle" as="item()*">
                     <xsl:choose>
-                        <xsl:when test="$toc/toc:title">
-                            <xsl:apply-templates select="$toc/toc:title/node()" mode="copy-xhtml-without-links"/>
+                        <xsl:when test="exists($toc/toc:title) or exists($toc/@title)">
+                            <xsl:choose>
+                                <xsl:when test="$toc/toc:title">
+                                    <xsl:apply-templates select="$toc/toc:title/node()" mode="copy-xhtml-without-links"/>
+                                </xsl:when>
+                                <xsl:when test="$toc/@title">
+                                    <xsl:value-of select="$toc/@title"/>
+                                </xsl:when>
+                            </xsl:choose>
                         </xsl:when>
-                        <xsl:when test="$toc/@title">
-                            <xsl:value-of select="$toc/@title"/>
-                        </xsl:when>
+                        <xsl:otherwise>*** Unable to determine the map title</xsl:otherwise>
                     </xsl:choose>
-                </xsl:when>
-                <xsl:otherwise>*** Unable to determine the map title</xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
+                </xsl:variable>
 
-        <xsl:message>
-            mapTitle value: <xsl:value-of select="$mapTitle"/>
-            mapTitle copy: <xsl:copy-of select="$mapTitle"/>
-            mainbook: <xsl:value-of select="$mapTitle/*[@class='ph mainbooktitle']"/>
-        </xsl:message>
+                <div>
+                    <xsl:call-template name="generateComponentClassAttribute">
+                        <xsl:with-param name="compClass">wh_search_input</xsl:with-param>
+                    </xsl:call-template>
+                    <!-- Copy attributes -->
+                    <xsl:copy-of select="@* except @class"/>
 
-        <div>
-            <xsl:call-template name="generateComponentClassAttribute">
-                <xsl:with-param name="compClass">wh_search_input</xsl:with-param>
-            </xsl:call-template>
-            <!-- Copy attributes -->
-            <xsl:copy-of select="@* except @class"/>
+                    <xsl:variable name="localizedSearch">
+                        <xsl:choose>
+                            <xsl:when test="exists($i18n_context)">
+                                <xsl:for-each select="$i18n_context[1]">
+                                    <xsl:call-template name="getWebhelpString">
+                                        <xsl:with-param name="stringName" select="'webhelp.search'"/>
+                                    </xsl:call-template>
+                                </xsl:for-each>
+                            </xsl:when>
+                            <xsl:otherwise>Search</xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
 
-            <xsl:variable name="localizedSearch">
-                <xsl:choose>
-                    <xsl:when test="exists($i18n_context)">
-                        <xsl:for-each select="$i18n_context[1]">
-                            <xsl:call-template name="getWebhelpString">
-                                <xsl:with-param name="stringName" select="'webhelp.search'"/>
-                            </xsl:call-template>
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:otherwise>Search</xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>
-            <xsl:variable name="localizedSearchQuery">
-                <xsl:choose>
-                    <xsl:when test="exists($i18n_context)">
-                        <xsl:for-each select="$i18n_context[1]">
-                            <xsl:call-template name="getWebhelpString">
-                                <xsl:with-param name="stringName" select="'search.query'"/>
-                            </xsl:call-template>
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:otherwise>Search query</xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>
+                    <xsl:variable name="localizedSearchQuery">
+                        <xsl:choose>
+                            <xsl:when test="exists($i18n_context)">
+                                <xsl:for-each select="$i18n_context[1]">
+                                    <xsl:call-template name="getWebhelpString">
+                                        <xsl:with-param name="stringName" select="'search.query'"/>
+                                    </xsl:call-template>
+                                </xsl:for-each>
+                            </xsl:when>
+                            <xsl:otherwise>Search query</xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
 
-            <xsl:variable name="search_comp_output">
-                <form id="searchForm"
-                      method="get"
-                      role="search"
-                      action="{concat($PATH2PROJ, 'search', $OUTEXT)}">
-                    <div>
-                        <h1>
-                            <xsl:value-of select="$mapTitle/*[contains(@class, 'mainbooktitle')]"/>
-                        </h1>
-                    </div>
-                    <div>
-                        <input type="search" placeholder="{$localizedSearch} " class="wh_search_textfield"
-                               id="textToSearch" name="searchQuery" aria-label="{$localizedSearchQuery}"
-                               required="required"/>
-                        <button type="submit" class="wh_search_button" aria-label="{$localizedSearch}">
-                            <span>
-                                <xsl:value-of select="$localizedSearch"/>
-                            </span>
-                        </button>
-                    </div>
-                </form>
-            </xsl:variable>
+                    <xsl:variable name="search_comp_output">
+                        <form id="searchForm"
+                              method="get"
+                              role="search"
+                              action="{concat($PATH2PROJ, 'search', $OUTEXT)}">
+                            <div>
+                                <h1>
+                                    <xsl:value-of select="$mapTitle/*[contains(@class, 'mainbooktitle')]"/>
+                                </h1>
+                            </div>
+                            <div>
+                                <input type="search" placeholder="{$localizedSearch} " class="wh_search_textfield"
+                                       id="textToSearch" name="searchQuery" aria-label="{$localizedSearchQuery}"
+                                       required="required"/>
+                                <button type="submit" class="wh_search_button" aria-label="{$localizedSearch}">
+                                    <span>
+                                        <xsl:value-of select="$localizedSearch"/>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </xsl:variable>
 
-            <xsl:call-template name="outputComponentContent">
-                <xsl:with-param name="compContent" select="$search_comp_output"/>
-                <xsl:with-param name="compName" select="local-name()"/>
-            </xsl:call-template>
-        </div>
-
+                    <xsl:call-template name="outputComponentContent">
+                        <xsl:with-param name="compContent" select="$search_comp_output"/>
+                        <xsl:with-param name="compName" select="local-name()"/>
+                    </xsl:call-template>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
 
     </xsl:template>
 
@@ -136,7 +135,6 @@
                     <xsl:apply-templates select="@class" mode="copy_template"/>
                 </xsl:variable>
                 <xsl:attribute name="class" select="concat(' ', $compClass, ' ', string($classFromTemplate), ' ')"/>
-
                 <xsl:apply-templates select="@* except @class" mode="#current"/>
             </xsl:when>
             <xsl:otherwise>
