@@ -65,7 +65,7 @@ body{
 a,
 a:hover,
 a:visited{
-    color: #1860A8;
+    color: #FF8C00;
 }
 a:hover{
     text-decoration: none;
@@ -280,6 +280,19 @@ Example:
     height: 2.8em;
 }
 
+@media only screen and (max-width: 425px) {
+    #searchForm{
+        flex-direction: column;
+        align-items: center;
+    }
+    #searchForm>div{
+        width: 90%;
+    }
+    #searchForm h1{
+        text-align: center;
+    }
+}
+
 /* Search autocomplete icons */
 .search-autocomplete-proposal-type-history a,
 .search-autocomplete-proposal-type-history a:hover,
@@ -301,12 +314,6 @@ Example:
     background-color: #346ec5;
 }
 
-/*@media only screen and (max-width: 999px) {*/
-    /*.wh_search_input:after{*/
-        /*display:none;*/
-    /*}*/
-
-/*}*/
 @media only screen and (max-width: 767px) {
     .wh_main_page .wh_search_input,
     .wh_search_input {
@@ -507,7 +514,7 @@ Example:
  *
  */
 .wh_index_terms span.wh_first_letter {
-    color: #346ec5;
+    color: #FF8C00;
 }
 .wh_index_terms #indexList{
     padding:0;
