@@ -3,9 +3,11 @@
 <project>
     <target name="dita2ia-webhelp-responsive-ab"
             depends="dita2custom-webhelp-resp.init,
+               build-init,
                dita2custom-webhelp-resp.copy,
                dita2check-condition-contain,
                dita2use-template,
+               dita2transform-input-file,
                dita2webhelp-responsive"/>
 
     <target name="dita2custom-webhelp-resp.init">
@@ -30,7 +32,37 @@
     </target>
 
     <target name="dita2use-template">
-        <property name="webhelp.publishing.template" value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
+        <property name="webhelp.publishing.template"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
+        <property name="webhelp.template.index.terms.file"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/page-templates/my-wt_terms.html"/>
     </target>
 
+    <target name="dita2transform-input-file">
+        <script language="javascript"><![CDATA[
+            var File = java.io.File;
+            var FileReader = java.io.FileReader;
+            var BufferedReader = java.io.BufferedReader;
+            var FileWriter = java.io.FileWriter;
+            var inputFile = project.getProperty("args.input");
+            var inputDir = inputFile.substr(0, inputFile.lastIndexOf('/'));
+            project.setUserProperty("args.input.dir", inputDir);
+            ]]>
+        </script>
+        <xslt in="${args.input}"
+              out="${args.input.dir}/reverse-book.ditamap"
+              style="${dita.plugin.com.ia-trainee-task-ab.dir}/xsl/modify-ditamap.xsl">
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        <script language="javascript"><![CDATA[
+            var File = java.io.File;
+            var FileReader = java.io.FileReader;
+            var BufferedReader = java.io.BufferedReader;
+            var FileWriter = java.io.FileWriter;
+            var inputDir = project.getProperty("args.input.dir");
+            var newInputFile = inputDir.concat('/reverse-book.ditamap')
+            project.setUserProperty("args.input", newInputFile);
+            ]]>
+        </script>
+    </target>
 </project>
