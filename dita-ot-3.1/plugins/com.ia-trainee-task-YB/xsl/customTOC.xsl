@@ -12,61 +12,58 @@
     <xsl:template name="createTOCContent-yb">
         <xsl:param name="cTopic" select="."/>
         <xsl:param name="title"/>
-                <xsl:element name="span" namespace="{$namespace}">
-                    <xsl:attribute name="class">topicref</xsl:attribute>
-                    <xsl:if test="$cTopic/@outputclass">
-                        <xsl:attribute name="class">
-                            <xsl:value-of select="@outputclass"/>
+        <xsl:element name="span" namespace="{$namespace}">
+            <xsl:attribute name="class">topicref</xsl:attribute>
+            <xsl:if test="$cTopic/@outputclass">
+                <xsl:attribute name="class">
+                    <xsl:value-of select="@outputclass"/>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:variable name="hrefLink">
+                <xsl:choose>
+                    <xsl:when
+                            test="(string-length($cTopic/@href) eq 0) or ($cTopic/@href eq 'javascript:void(0)') ">
+                        <!-- EXM-38925 Select the href of the first descendant topic ref -->
+                        <xsl:value-of
+                                select="$cTopic/descendant::toc:topic[(string-length(@href) ne 0) and (@href ne 'javascript:void(0)')][1]/@href"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$cTopic/@href"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+
+            <xsl:message>
+                tocNumbering =
+                <xsl:value-of select="$tocNumbering"/>
+            </xsl:message>
+
+            <xsl:choose>
+                <xsl:when test="$hrefLink">
+
+                    <xsl:element name="a" namespace="{$namespace}">
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="concat($PATH2PROJ, $hrefLink)"/>
                         </xsl:attribute>
-                    </xsl:if>
-                    <xsl:variable name="hrefLink">
-                        <xsl:choose>
-                            <xsl:when
-                                    test="(string-length($cTopic/@href) eq 0) or ($cTopic/@href eq 'javascript:void(0)') ">
-                                <!-- EXM-38925 Select the href of the first descendant topic ref -->
-                                <xsl:value-of
-                                        select="$cTopic/descendant::toc:topic[(string-length(@href) ne 0) and (@href ne 'javascript:void(0)')][1]/@href"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="$cTopic/@href"/>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:variable>
-
-                    <xsl:message>
-                        tocNumbering =
-                        <xsl:value-of select="$tocNumbering"/>
-                    </xsl:message>
-
-                    <xsl:choose>
-                        <xsl:when test="$hrefLink">
-
-                            <xsl:element name="a" namespace="{$namespace}">
-                                <xsl:attribute name="href">
-                                    <xsl:value-of select="concat($PATH2PROJ, $hrefLink)"/>
-                                </xsl:attribute>
-                                <xsl:if test="$cTopic/@scope = 'external'">
-                                    <xsl:attribute name="target">_blank</xsl:attribute>
-                                </xsl:if>
-                                <xsl:for-each select="$cTopic/@*[starts-with(name(), 'data-')]">
-                                    <xsl:copy/>
-                                </xsl:for-each>
-                                <xsl:if test="$tocNumbering='true'">
-                                    <xsl:number level="multiple" format="1.1 "/>
-                                </xsl:if>
-                                <xsl:copy-of select="$title"/>
-                            </xsl:element>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:copy-of select="$title"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:element>
+                        <xsl:if test="$cTopic/@scope = 'external'">
+                            <xsl:attribute name="target">_blank</xsl:attribute>
+                        </xsl:if>
+                        <xsl:for-each select="$cTopic/@*[starts-with(name(), 'data-')]">
+                            <xsl:copy/>
+                        </xsl:for-each>
+                        <xsl:if test="$tocNumbering='true'">
+                            <xsl:number level="multiple" format="1.1 "/>
+                        </xsl:if>
+                        <xsl:copy-of select="$title"/>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:copy-of select="$title"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:element>
 
     </xsl:template>
-
-
-
 
 
     <!-- Inghibit output of text in the navigation tree. -->
@@ -80,7 +77,8 @@
     <xsl:template match="toc:topic" mode="create-main-page-toc">
         <xsl:param name="applyRecursion" select="true()"/>
 
-        <xsl:message>---------- YB TOC file <xsl:value-of select="$using_transtype"/>---------</xsl:message>
+        <xsl:message>---------- YB TOC file <xsl:value-of select="$using_transtype"/>---------
+        </xsl:message>
         <xsl:choose>
             <xsl:when test="$using_transtype = 'ia-webhelp-responsive-YB'">
 
@@ -94,7 +92,8 @@
                         <xsl:variable name="entriesID" select="concat(@wh-toc-id, '-entries')"/>
                         <div class=" wh_main_page_toc_accordion_header ">
                             <span role="heading" aria-level="1" id="{$headingID}">
-                                <span role="button" aria-expanded="false" class="header-button" aria-controls="{$entriesID}" tabindex="0">
+                                <span role="button" aria-expanded="false" class="header-button"
+                                      aria-controls="{$entriesID}" tabindex="0">
                                     <xsl:call-template name="createTOCContent-yb">
                                         <xsl:with-param name="cTopic" select="."/>
                                         <xsl:with-param name="title" select="$title"/>
@@ -106,7 +105,8 @@
                                 <xsl:with-param name="class" select="'wh_toc_shortdesc'"/>
                             </xsl:call-template>
                         </div>
-                        <div class=" wh_main_page_toc_accordion_entries " id="{$entriesID}" role="region" aria-labelledby="{$headingID}">
+                        <div class=" wh_main_page_toc_accordion_entries " id="{$entriesID}" role="region"
+                             aria-labelledby="{$headingID}">
                             <xsl:apply-templates mode="#current"/>
                         </div>
                     </xsl:when>
@@ -149,5 +149,6 @@
             </div>
         </xsl:if>
     </xsl:template>
+
 
 </xsl:stylesheet>
