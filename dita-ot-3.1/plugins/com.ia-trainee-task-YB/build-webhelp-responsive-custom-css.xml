@@ -10,6 +10,7 @@
     <target name="dita2webhelp-responsive-YB-custom-css.init">
         <echo> 111 </echo>
         <property name="args.css.file" value="css/custom-red.css"/>
+        <property name="webhelp.publishing.template" value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/my_own_tiles.opt"/>
     </target>
 
     <target name="dita2webhelp-responsive-YB-custom-css.copy">
@@ -30,6 +31,9 @@
     <target name="dita2webhelp-responsive-YB-contain2" unless="contain">
             <echo message="there is NO user!!!!!"/>
     </target>
+
+    <property name="webhelp.template.index.terms.file"
+              value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/customIndexTerms.html"/>
 
 
 </project>
