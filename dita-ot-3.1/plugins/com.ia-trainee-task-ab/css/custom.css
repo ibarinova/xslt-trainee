@@ -58,6 +58,18 @@ span.my_substr{
     background-color: orange;
 }
 
+#go2top{
+    border-radius: 50%;
+    background-color: orange;
+}
+
+@media print{
+   *.title:after{
+       content: " - printed copy";
+   }
+}
+
+
 
 
 
