@@ -353,7 +353,7 @@ Example:
 /* Publication TOC tooltip */
 .wh_breadcrumb .topicref .wh-tooltip,
 .wh_publication_toc .topicref .wh-tooltip {
-    background-color: #5185cb;
+    background-color: #FFA430;
     color: #fff;
     font-size: 1.4rem;
 }
@@ -367,19 +367,19 @@ Example:
 /* Tooltip arrow. */
 
 [data-tooltip-position="left"] .topicref .wh-tooltip::before {
-    border-left-color: #5185cb;
+    border-left-color: #FFA430;
 }
 
 [data-tooltip-position="right"] .topicref .wh-tooltip::before {
-    border-right-color: #5185cb;
+    border-right-color: #FFA430;
 }
 
 [data-tooltip-position="bottom"] .topicref .wh-tooltip::before {
-    border-bottom-color: #5185cb;
+    border-bottom-color: #FFA430;
 }
 
 [data-tooltip-position="top"] .topicref .wh-tooltip::before {
-    border-top-color: #5185cb;
+    border-top-color: #FFA430;
 }
 
 /*
@@ -550,12 +550,10 @@ html[dir='rtl'] .wh_top_menu ul li:hover > ul {
 
 .custom_mainbooktitle{
      position: relative;
-     height: 2.8em;
      left: 80px;
-     padding: 115px 0;
-     padding-top: 1%;
      text-align: center;
      font-size: 40px;
+     text-align:center;
 }
 
 .wh_search_input {
@@ -564,6 +562,7 @@ html[dir='rtl'] .wh_top_menu ul li:hover > ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         background: url(resources/images/bgr_right.png) right no-repeat #FFA430;
 }
 
