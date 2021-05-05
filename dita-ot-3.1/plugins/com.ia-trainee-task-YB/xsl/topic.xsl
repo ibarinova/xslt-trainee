@@ -55,37 +55,10 @@
 
     </xsl:template>
 
-    <!--Template-->
-    <xsl:template match="*[contains(@class, ' topic/p ')]" name="topic.p">
-        <!-- To ensure XHTML validity, need to determine whether the DITA kids are block elements.
-             If so, use div_class="p" instead of p -->
-        <xsl:choose>
-            <xsl:when test="descendant::*[dita-ot:is-block(.)]">
-                <div class="p">
-                    <xsl:call-template name="commonattributes"/>
-                    <xsl:call-template name="setid"/>
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <p>
-                    <xsl:call-template name="commonattributes"/>
-                    <xsl:call-template name="setid"/>
-                    <xsl:apply-templates/>
-                </p>
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:message>
-            ""Hello, Yuliia"
-            <xsl:value-of select="$using_transtype"/>
-        </xsl:message>
-    </xsl:template>
-
     <!--Template for concept-->
-    <xsl:template match="conbody">
-        <xsl:for-each select="p">
+    <xsl:template match="conbody/p">
             <xsl:variable name="element-name" select="name()"/>
-            <xsl:variable name="position" select="position()"/>
+            <xsl:variable name="position" select="count(preceding-sibling::p)+1"/>
             <xsl:element name="{$element-name}">
                 <xsl:attribute name="class">
                     <xsl:choose>
@@ -103,10 +76,6 @@
                 <xsl:value-of select="concat('Current &lt;', $element-name,'&gt; #',$position, ' ')"/>
                 <xsl:apply-templates select="node()"/> <!--applying all content after conversation 'Current...'-->
             </xsl:element>
-        </xsl:for-each>
     </xsl:template>
-
 </xsl:stylesheet>
-
-
 

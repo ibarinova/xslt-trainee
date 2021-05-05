@@ -26,17 +26,18 @@
 <a href="#content" class="sr-only sr-only-focusable">
     <whc:macro value="${i18n(jump.to.index)}"/>
 </a>
-<whc:include_html href="/Users/yuliiabondarenko/IdeaProjects/trainee-project/build/dita-ot-3.1/plugins/com.oxygenxml.webhelp.responsive/oxygen-webhelp/page-templates/header.xml"/>
+<whc:include_html href="${args.hdr}"/>
 <whc:include_html href="${webhelp.fragment.before.body}"/>
+<whc:include_html href="${webhelp.fragment.header}"/>
 <whc:webhelp_search_input/>
 <div class="container-fluid" id="content">
     <div class="row">
         <whc:webhelp_index_terms class="col-xs-12 col-sm-12 col-md-12 col-lg-12"/>
     </div>
 </div>
-<footer class="navbar navbar-default wh_footer" whc:version="21.0">
-    <whc:include_html href="/Users/yuliiabondarenko/IdeaProjects/trainee-project/build/dita-ot-3.1/plugins/com.ia-trainee-task-YB/xsl/customFooter.xsl"/>
-</footer>
+
+<whc:include_html href="footer.xml"/>
+
 <whc:include_html href="${webhelp.fragment.after.body}"/>
 </body>
 </html>
