@@ -18,6 +18,11 @@ body {
     color:orange
 }
 
+/*style for Lorem Ipsum*/
+.even_p {background-color: #D9E1F2;}
+.odd_p {background-color: #FFE482;}
+
+
 /*add parameters for images*/
 .note::before {
         content: "";
@@ -78,3 +83,7 @@ body {
          display: inline-block;
          float: left;
 }
+
+
+
+

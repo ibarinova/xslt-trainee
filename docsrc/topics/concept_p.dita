@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="test-concept1">
+    <title>YB test concept</title>
+    <shortdesc>Shortdesc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+    </shortdesc>
+    <conbody>
+        <p>p1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </p>
+        <p id="test-concept1-p2">p2 Lorem ipsum dolor sit amet, <codeph>codeph</codeph> adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua <filepath>filepath.xml</filepath>. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>p3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </p>
+        <p id="test-concept1-p4">p4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <filepath>filepath</filepath> tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>p5 Lorem ipsum dolor sit amet, <userinput>userinput</userinput>
+            <userinput>userinput</userinput> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </conbody>
+</concept>
