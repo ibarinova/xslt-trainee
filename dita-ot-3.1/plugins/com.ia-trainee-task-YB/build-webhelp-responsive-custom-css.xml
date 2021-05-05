@@ -5,6 +5,7 @@
                dita2webhelp-responsive-YB-custom-css.copy,
                dita2webhelp-responsive-YB-contain,
                dita2webhelp-responsive-YB-contain2,
+               dita2go.to.top-on.main.page,
                dita2webhelp-responsive"/>
 
     <target name="dita2webhelp-responsive-YB-custom-css.init">
@@ -35,6 +36,10 @@
     <property name="webhelp.template.index.terms.file"
               value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/customIndexTerms.html"/>
 
+    <target name="dita2go.to.top-on.main.page">
+        <property name="webhelp.fragment.after.body"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/goToTopBtn.xml"/>
+    </target>
 
 </project>
 
