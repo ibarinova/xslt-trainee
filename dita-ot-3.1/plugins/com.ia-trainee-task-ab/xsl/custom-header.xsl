@@ -145,4 +145,6 @@
         </xsl:choose>
     </xsl:template>
 
+    <xsl:template match="whc:webhelp_publication_title" mode="copy_template"/>
+
 </xsl:stylesheet>

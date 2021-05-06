@@ -11,6 +11,8 @@
  * Fonts.
  *
  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -38,10 +40,11 @@
 
 html, body {
     min-width:100%;
+    max-width: 1840px;
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
     /*
@@ -59,7 +62,7 @@ body{
     margin:0;
 }
 .wh_header{
-    background: #000 none;
+    background: #ff6800 none;
     color: #ffffff;
 }
 a,
