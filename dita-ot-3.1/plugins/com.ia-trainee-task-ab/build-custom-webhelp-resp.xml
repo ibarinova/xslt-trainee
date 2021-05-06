@@ -9,6 +9,8 @@
                dita2use-template,
                dita2transform-input-file,
                dita2go.to.top.btn,
+               dita2custom-mainbooktitle,
+               dita2custom-favicon,
                dita2webhelp-responsive"/>
 
     <target name="dita2custom-webhelp-resp.init">
@@ -80,4 +82,17 @@
         <property name="webhelp.fragment.after.body"
                   value="${dita.plugin.com.ia-trainee-task-ab.dir}/go2top-btn.xml"/>
     </target>
+
+    <target name="dita2custom-mainbooktitle">
+        <property name="webhelp.logo.image"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/css/images/intelliarts-logo.svg"/>
+        <property name="webhelp.logo.image.target.url"
+                  value="https://intelliarts.com"/>
+    </target>
+
+    <target name="dita2custom-favicon">
+        <property name="webhelp.favicon"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/css/images/favicon.png"/>
+    </target>
+
 </project>
