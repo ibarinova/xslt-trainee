@@ -8,6 +8,7 @@
                dita2check-condition-contain,
                dita2use-template,
                dita2transform-input-file,
+               dita2go.to.top.btn,
                dita2webhelp-responsive"/>
 
     <target name="dita2custom-webhelp-resp.init">
@@ -31,11 +32,17 @@
         <echo message="${contains}"/>
     </target>
 
-    <target name="dita2use-template">
+    <condition property="check-transtype">
+        <equals arg1="${transtype}" arg2="ia-webhelp-responsive-ab" trim="true"/>
+    </condition>
+
+    <target name="dita2use-template" if="check-transtype">
         <property name="webhelp.publishing.template"
                   value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
         <property name="webhelp.template.index.terms.file"
                   value="${dita.plugin.com.ia-trainee-task-ab.dir}/page-templates/my-wt_terms.html"/>
+        <property name="webhelp.fragment.footer"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/my-footer.xml"/>
     </target>
 
     <target name="dita2transform-input-file">
@@ -64,5 +71,13 @@
             project.setUserProperty("args.input", newInputFile);
             ]]>
         </script>
+    </target>
+
+    <target name="dita2go.to.top.btn">
+        <copy todir="${output.dir}/js">
+            <fileset dir="${dita.plugin.com.ia-trainee-task-ab.dir}/js"/>
+        </copy>
+        <property name="webhelp.fragment.after.body"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/go2top-btn.xml"/>
     </target>
 </project>

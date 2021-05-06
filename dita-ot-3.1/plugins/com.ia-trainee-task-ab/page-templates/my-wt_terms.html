@@ -15,6 +15,7 @@
 
         <script data-main="${oxygen-webhelp-assets-dir}/app/indexterms-page.js"
                 src="${oxygen-webhelp-assets-dir}/lib/requirejs/require.js"></script>
+        <script type="text/javascript" src="js/my-script.js"/>
 
         <!-- Skin resources -->
         <whc:webhelp_skin_resources/>
@@ -26,7 +27,7 @@
         <a href="#content" class="sr-only sr-only-focusable">
             <whc:macro value="${i18n(jump.to.index)}"/>
         </a>
-        <whc:include_html href="/Users/andrianaburbylo/IdeaProjects/untitled-15-04/build/dita-ot-3.1/plugins/com.oxygenxml.webhelp.responsive/oxygen-webhelp/page-templates/header.xml"/>
+        <whc:include_html href="../../com.oxygenxml.webhelp.responsive/oxygen-webhelp/page-templates/header.xml"/>
         <whc:include_html href="${webhelp.fragment.before.body}"/>
 
         <whc:webhelp_search_input/>
@@ -37,7 +38,7 @@
         </div>
 
         <footer class="navbar navbar-default wh_footer" whc:version="21.0">
-            <whc:include_html href="../my-footer.xml"/>
+            <whc:include_html href="${webhelp.fragment.footer}"/>
         </footer>
 
         <whc:include_html href="${webhelp.fragment.after.body}"/>
