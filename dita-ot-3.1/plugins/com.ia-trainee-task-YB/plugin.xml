@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.ia-trainee-task-YB">
+    <feature extension="dita.conductor.transtype.check" value="ia-webhelp-responsive-YB"/>
+    <feature extension="dita.transtype.print" value="ia-webhelp-responsive-YB"/>
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+    <feature extension="dita.conductor.html5.param" file="parameters.xml"/>
+    <!--features for trainee tasks-->
+    <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
+    <feature extension="dita.xsl.html5" file="xsl/splitString.xsl"/>
+    <!--features for adding Booktitle-->
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/customBooktitle.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/customBooktitle.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/customBooktitle.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/customBooktitle.xsl"/>
+    <!--features for adding custom footer-->
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/customFooter.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/customFooter.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/customFooter.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/customFooter.xsl"/>
+    <!--features for adding TOC on main page-->
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/customTOC.xsl"/>
+    <!--features for adding custom parameters-->
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage.param" file="parameters.xml"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp.param" file="parameters.xml"/><!--
+
+    <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/reverseTOC.xsl"/>-->
+</plugin>

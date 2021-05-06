@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dummy>
+<!-- Any Ant code allowed in xslt task is possible. Example: -->
+  <param name="using_transtype" expression="${transtype}"/>
+  <param name="using_input" expression="${args.input}"/>
+</dummy>
