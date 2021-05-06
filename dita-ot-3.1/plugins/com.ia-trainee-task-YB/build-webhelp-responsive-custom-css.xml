@@ -5,7 +5,8 @@
                dita2webhelp-responsive-YB-custom-css.copy,
                dita2webhelp-responsive-YB-contain,
                dita2webhelp-responsive-YB-contain2,
-               dita2go.to.top-on.main.page,
+               dita2index-term-page,
+               dita2go.to.top.btn,
                dita2webhelp-responsive"/>
 
     <target name="dita2webhelp-responsive-YB-custom-css.init">
@@ -33,9 +34,18 @@
             <echo message="there is NO user!!!!!"/>
     </target>
 
-    <property name="webhelp.template.index.terms.file"
-              value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/customIndexTerms.html"/>
-    <target name="dita2go.to.top-on.main.page">
+    <condition property="check-transtype">
+        <equals arg1="${transtype}" arg2="ia-webhelp-responsive-YB" trim="true"/>
+    </condition>
+    <target name="dita2index-term-page" if="check-transtype">
+        <property name="webhelp.template.index.terms.file"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/customIndexTerms.html"/>
+    </target>
+
+    <target name="dita2go.to.top.btn">
+        <copy todir="${output.dir}/js">
+            <fileset dir="${dita.plugin.com.ia-trainee-task-YB.dir}/js"/>
+        </copy>
         <property name="webhelp.fragment.after.body"
                   value="${dita.plugin.com.ia-trainee-task-YB.dir}/goToTopBtn.xml"/>
     </target>
