@@ -12,6 +12,7 @@
  *
  */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 @font-face {
     font-family: 'Roboto';
@@ -38,13 +39,16 @@
     src: url(resources/fonts/Roboto-Bold.ttf);
 }
 
-html, body {
-    min-width:100%;
+body {
+    margin: 0 auto;
     max-width: 1840px;
 }
 
 body{
     font-family: 'Ubuntu', sans-serif;
+}
+code{
+    font-family: 'Ubuntu mono', monospace;
 }
 
     /*
@@ -99,22 +103,29 @@ a:hover{
     font-size: 0.9em;
 }
 .wh_top_menu a{
-    color: #fff;
+    color: white;
     line-height: 2em;
 }
 
 /* The submenus */
+.wh_top_menu ul li:hover{
+    background-color: white;
+}
+.wh_top_menu ul li:hover a{
+    color: #ff6800;
+}
 .wh_top_menu ul ul {
-    background-color: #333;
+    background-color: white;
 }
-.wh_top_menu ul li:hover {
-    background-color: #333;
+.wh_top_menu ul ul li a{
+    color: #ff6800;
 }
-.wh_top_menu ul ul li a:hover {
-    background: #000;
+.wh_top_menu ul ul li a:hover{
+    background-color: #ff6800;
+    color: white;
 }
 .wh_top_menu ul ul li {
-    border-top-color: #000;
+    border-top-color: #ff6800;
     width: 270px;
     text-transform: capitalize;
 }
