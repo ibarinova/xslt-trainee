@@ -6,6 +6,9 @@
     <feature extension="dita.xsl.html5" file="xsl/topic.xsl"/>
     <feature extension="dita.xsl.html5" file="xsl/step.xsl"/>
     <feature extension="dita.xsl.html5" file="xsl/task-string.xsl"/>
+    <feature extension="dita.xsl.html5" file="xsl/custom-definition-list.xsl"/>
+    <feature extension="dita.xsl.html5" file="xsl/hide-image.xsl"/>
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/search-breadcrumbs.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp" file="xsl/custom-header.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/custom-header.xsl"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage" file="xsl/custom-header.xsl"/>

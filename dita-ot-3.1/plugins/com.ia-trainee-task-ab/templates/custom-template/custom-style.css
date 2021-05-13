@@ -566,7 +566,12 @@ html[dir='rtl'] .wh_top_menu ul li:hover > ul {
     max-width: 270px;
 }
 
-/* PAGE LINK */
+/*
+ * ------------------------------------------------------------------
+ *
+ * Page link.
+ *
+ */
 .page-link{
     color: #FF8C00;
 }
@@ -583,4 +588,23 @@ html[dir='rtl'] .wh_top_menu ul li:hover > ul {
 .page-item.active .page-link {
     background-color: orange;
     border-color: orange;
+}
+
+/*
+ * ------------------------------------------------------------------
+ *
+ * Table style.
+ *
+ */
+.thead{
+    background-color: #fbae78;
+}
+.table th, .table td{
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 768px){
+    .d-none {
+        display: block!important;
+    }
 }

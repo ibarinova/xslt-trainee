@@ -3,4 +3,5 @@
 <dummy>
     <param name="currentTranstype" expression="${transtype}"/>
     <param name="myString" expression="${args.input}"/>
+    <param name="no-images" expression="true"/>
 </dummy>
