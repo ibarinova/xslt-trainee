@@ -9,7 +9,7 @@
                dita2go.to.top.btn,
                dita2custom-favicon,
                dita2custom-mainbooktitle,
-               dita2use-template,
+               dita2use-template-YB,
                dita2webhelp-responsive"/>
 
 
@@ -62,7 +62,7 @@
                   value="${dita.plugin.com.ia-trainee-task-YB.dir}/css/images/logo.svg"/>
     </target>
 
-    <target name="dita2use-template" if="check-transtype">
+    <target name="dita2use-template-YB" if="check-transtype">
         <property name="webhelp.fragment.footer"
                   value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/intelliarts_footer.xml"/>
     </target>
