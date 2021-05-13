@@ -3,16 +3,67 @@
 <project>
     <target name="dita2ia-webhelp-responsive-ab"
             depends="dita2custom-webhelp-resp.init,
-               build-init,
-               dita2custom-webhelp-resp.copy,
-               dita2check-condition-contain,
-               dita2use-template,
-               dita2transform-input-file,
-               dita2go.to.top.btn,
-               dita2custom-mainbooktitle,
-               dita2custom-favicon,
-               dita2webhelp-responsive"/>
+                build-init,
+                dita2custom-webhelp-resp.copy,
+                dita2check-condition-contain,
+                dita2use-template-ab,
+                dita2transform-input-file,
+                dita2go.to.top.btn,
+                dita2custom-mainbooktitle,
+                dita2custom-favicon,
+                dita2webhelp-responsive"/>
+                <!--dita2image-path,
+                dita2ant-contrib-foreach-task,
+                dita2copy-ditamap-with-new-images"/>-->
+    <taskdef
+            classpath="${dita.plugin.com.ia-trainee-task-ab.dir}/lib/ant-contrib.jar"
+            resource="net/sf/antcontrib/antlib.xml"/>
 
+    <target name="dita2image-path">
+        <xslt in="${args.input}"
+              out="${output.dir}/images-list.txt"
+              style="${dita.plugin.com.ia-trainee-task-ab.dir}/xsl/image-task.xsl">
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+
+    <target name="dita2ant-contrib-foreach-task">
+        <property name="path-changes-list" location="${output.dir}/images-list.txt"/>
+        <loadfile property="path-changes-list-file" srcfile="${path-changes-list}"/>
+        <foreach list="${path-changes-list-file}" target="dita2copy-images" param="image-file-name"
+                 delimiter="'&#10;'"/>
+    </target>
+
+    <target name="dita2copy-images">
+        <propertyregex property="path-to-images" input="${image-file-name}"
+                       regexp="^(.+?);(.+?)$"
+                       select="\1" />
+        <propertyregex property="new-image-name" input="${image-file-name}"
+                       regexp="^(.+?);(.+?)$"
+                       select="\2" />
+        <copy file="${path-to-images}" tofile="${output.dir}/${new-image-name}"/>
+    </target>
+
+    <target name="dita2copy-ditamap-with-new-images">
+        <script language="javascript"><![CDATA[
+            var File = java.io.File;
+            var FileReader = java.io.FileReader;
+            var BufferedReader = java.io.BufferedReader;
+            var FileWriter = java.io.FileWriter;
+            var inputFile = project.getProperty("args.input");
+            var outputFile = inputFile.substring(inputFile.lastIndexOf('/')+1);
+            project.setUserProperty("args.output", outputFile);
+            ]]>
+        </script>
+        <xslt in="${args.input}"
+              out="${output.dir}/${args.output}"
+              style="${dita.plugin.com.ia-trainee-task-ab.dir}/xsl/image-changes.xsl">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="imagesList" expression="${path-changes-list-file}"/>
+        </xslt>
+    </target>
+
+<!--  Webhelp tasks  -->
     <target name="dita2custom-webhelp-resp.init">
         <property name="args.css.file" value="css/custom.css"/>
     </target>
@@ -25,20 +76,19 @@
 
     <target name="dita2check-condition-contain">
         <condition property="contains" value="user">
-            <contains string="${args.input}" substring="user1" />
+            <contains string="${args.input}" substring="user1"/>
         </condition>
         <condition property="contains" value="IdeaProjects">
-            <contains string="${args.input}" substring="IdeaProjects" />
+            <contains string="${args.input}" substring="IdeaProjects"/>
         </condition>
         <property name="contains" value="default"/>
-        <echo message="${contains}"/>
     </target>
 
     <condition property="check-transtype">
         <equals arg1="${transtype}" arg2="ia-webhelp-responsive-ab" trim="true"/>
     </condition>
 
-    <target name="dita2use-template" if="check-transtype">
+    <target name="dita2use-template-ab" if="check-transtype">
         <property name="webhelp.publishing.template"
                   value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
         <property name="webhelp.template.index.terms.file"
