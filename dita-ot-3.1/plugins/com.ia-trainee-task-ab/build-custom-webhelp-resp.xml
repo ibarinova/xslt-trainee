@@ -3,9 +3,14 @@
 <project>
     <target name="dita2ia-webhelp-responsive-ab"
             depends="dita2custom-webhelp-resp.init,
+               build-init,
                dita2custom-webhelp-resp.copy,
                dita2check-condition-contain,
                dita2use-template,
+               dita2transform-input-file,
+               dita2go.to.top.btn,
+               dita2custom-mainbooktitle,
+               dita2custom-favicon,
                dita2webhelp-responsive"/>
 
     <target name="dita2custom-webhelp-resp.init">
@@ -29,7 +34,65 @@
         <echo message="${contains}"/>
     </target>
 
-    <target name="dita2use-template">
-        <property name="webhelp.publishing.template" value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
+    <condition property="check-transtype">
+        <equals arg1="${transtype}" arg2="ia-webhelp-responsive-ab" trim="true"/>
+    </condition>
+
+    <target name="dita2use-template" if="check-transtype">
+        <property name="webhelp.publishing.template"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/templates/custom-template/custom-template-tree.opt"/>
+        <property name="webhelp.template.index.terms.file"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/page-templates/my-wt_terms.html"/>
+        <property name="webhelp.fragment.footer"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/my-footer.xml"/>
     </target>
+
+    <target name="dita2transform-input-file">
+        <script language="javascript"><![CDATA[
+            var File = java.io.File;
+            var FileReader = java.io.FileReader;
+            var BufferedReader = java.io.BufferedReader;
+            var FileWriter = java.io.FileWriter;
+            var inputFile = project.getProperty("args.input");
+            var inputDir = inputFile.substr(0, inputFile.lastIndexOf('/'));
+            project.setUserProperty("args.input.dir", inputDir);
+            ]]>
+        </script>
+        <xslt in="${args.input}"
+              out="${args.input.dir}/reverse-book.ditamap"
+              style="${dita.plugin.com.ia-trainee-task-ab.dir}/xsl/modify-ditamap.xsl">
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        <script language="javascript"><![CDATA[
+            var File = java.io.File;
+            var FileReader = java.io.FileReader;
+            var BufferedReader = java.io.BufferedReader;
+            var FileWriter = java.io.FileWriter;
+            var inputDir = project.getProperty("args.input.dir");
+            var newInputFile = inputDir.concat('/reverse-book.ditamap')
+            project.setUserProperty("args.input", newInputFile);
+            ]]>
+        </script>
+    </target>
+
+    <target name="dita2go.to.top.btn">
+        <copy todir="${output.dir}/js">
+            <fileset dir="${dita.plugin.com.ia-trainee-task-ab.dir}/js"/>
+        </copy>
+        <property name="webhelp.fragment.after.body"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/go2top-btn.xml"/>
+    </target>
+
+    <target name="dita2custom-mainbooktitle">
+        <property name="webhelp.logo.image"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/css/images/intelliarts-logo.svg"/>
+        <property name="webhelp.logo.image.target.url"
+                  value="https://intelliarts.com"/>
+    </target>
+
+    <target name="dita2custom-favicon">
+        <property name="webhelp.favicon"
+                  value="${dita.plugin.com.ia-trainee-task-ab.dir}/css/images/favicon.png"/>
+    </target>
+
 </project>

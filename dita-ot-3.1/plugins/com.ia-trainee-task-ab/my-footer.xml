@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <div class="footer-top">
+        <a href="https://careers.intelliarts.com/" target="_blank">
+            Looking for a job? Please visit our careers site
+        </a>
+    </div>
+    <div class="footer-logo">
+        <div class="logo-image"></div>
+    </div>
+    <div class="footer-contacts">
+        <span>7 Kotyka Str, Suite 700, Lviv, 79014, Ukraine<br/>Phone: +380 32 297 04 83
+        </span>
+    </div>
+    <div class="footer-social">
+        <a href="http://www.facebook.com/intelliarts" target="_blank">
+            <div class="facebook-icon"></div>
+        </a>
+        <a href="http://www.linkedin.com/company/intelliarts" target="_blank">
+            <div class="lincedin-icon"></div>
+        </a>
+    </div>
+    <div class="footer-copyright">
+        <p class="copyrights-text">
+            INTELLIARTS &#x0040; 1999-2021
+        </p>
+    </div>
+</div>

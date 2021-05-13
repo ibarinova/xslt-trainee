@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.wh_logo>img{
+    width: 144px;
+    height: 26px;
+}
 
 .mynote{
     color: green;
@@ -48,6 +54,120 @@ span.my_substr{
     font-weight: bold;
 }
 
+.wh_main_page .wh_search_input{
+    background: none;
+    background-color: orange;
+    padding: 40px 0;
+}
 
+/*.wh_search_input, .wh_footer{
+    background: none;
+    background-color: orange;
+}*/
 
+#go2top{
+    border-radius: 50%;
+    background-color: orange;
+}
 
+@media print{
+   *.title:after{
+       content: " - printed copy";
+   }
+}
+
+/* footer styles */
+.wh_footer{
+    background: black;
+    padding: 0px;
+    font-family: 'Ubuntu', serif;
+}
+
+.wh_footer>div{
+    width: 100%;
+}
+
+.mx-auto{
+    width: 100%;
+}
+
+.footer-top{
+    background: url(images/footer-background.png) no-repeat;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-top a{
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+.footer-top a:hover{
+    text-decoration: underline;
+}
+
+.footer-logo{
+    margin-top: 60px;
+    height: 26px;
+}
+
+.logo-image{
+    background: url(images/intelliarts-logo.svg) no-repeat;
+    background-size: contain;
+    width: 144px;
+    height: 26px;
+    margin: 0 auto;
+}
+
+.footer-contacts{
+    height: 45px;
+    margin-top: 30px;
+}
+
+.footer-contacts span{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.footer-social{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-social a{
+    margin: 0 10px;
+}
+
+.facebook-icon, .lincedin-icon{
+    width: 47px;
+    height: 47px;
+}
+
+.facebook-icon{
+    background: url(images/facebook-icon.svg) no-repeat;
+    background-size: contain;
+}
+
+.lincedin-icon{
+    background: url(images/linkedin-icon.svg) no-repeat;
+    background-size: contain;
+}
+
+.footer-copyright{
+    height: 30px;
+    margin: 30px 0 65px;
+}
+
+.copyrights-text{
+    color: #636363;
+}
