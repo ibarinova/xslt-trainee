@@ -5,7 +5,13 @@
                dita2webhelp-responsive-YB-custom-css.copy,
                dita2webhelp-responsive-YB-contain,
                dita2webhelp-responsive-YB-contain2,
+               dita2index-term-page,
+               dita2go.to.top.btn,
+               dita2custom-favicon,
+               dita2custom-mainbooktitle,
+               dita2use-template,
                dita2webhelp-responsive"/>
+
 
     <target name="dita2webhelp-responsive-YB-custom-css.init">
         <echo> 111 </echo>
@@ -15,10 +21,8 @@
 
     <target name="dita2webhelp-responsive-YB-custom-css.copy">
         <copy file="plugins/com.ia-trainee-task-YB/css/custom-red.css" todir="${output.dir}/css"/>
-        <copy file="plugins/com.ia-trainee-task-YB/css/images/pawprint.png" todir="${output.dir}/images"/>
-        <copy file="plugins/com.ia-trainee-task-YB/css/images/cat.png" todir="${output.dir}/images"/>
-        <copy file="plugins/com.ia-trainee-task-YB/css/images/witch-cat.png" todir="${output.dir}/images"/>
-        <copy file="plugins/com.ia-trainee-task-YB/css/images/domestic-cat-shape.png" todir="${output.dir}/images"/>
+        <copy todir="${output.dir}/images">
+            <fileset dir="${dita.plugin.com.ia-trainee-task-YB.dir}/css/images"/> </copy>
         <condition property="contain">
             <contains substring="user" string="${args.input}"/>
         </condition>
@@ -32,9 +36,47 @@
             <echo message="there is NO user!!!!!"/>
     </target>
 
-    <property name="webhelp.template.index.terms.file"
-              value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/customIndexTerms.html"/>
+    <condition property="check-transtype">
+        <equals arg1="${transtype}" arg2="ia-webhelp-responsive-YB" trim="true"/>
+    </condition>
+    <target name="dita2index-term-page" if="check-transtype">
+        <property name="webhelp.template.index.terms.file"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/customIndexTerms.html"/>
+    </target>
 
+    <target name="dita2go.to.top.btn">
+        <copy todir="${output.dir}/js">
+            <fileset dir="${dita.plugin.com.ia-trainee-task-YB.dir}/js"/>
+        </copy>
+        <property name="webhelp.fragment.after.body"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/goToTopBtn.xml"/>
+    </target>
 
+    <target name="dita2custom-favicon">
+        <property name="webhelp.favicon"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/css/images/favicon.png"/>
+    </target>
+
+    <target name="dita2custom-mainbooktitle">
+        <property name="webhelp.logo.image"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/css/images/logo.svg"/>
+    </target>
+
+    <target name="dita2use-template" if="check-transtype">
+        <property name="webhelp.fragment.footer"
+                  value="${dita.plugin.com.ia-trainee-task-YB.dir}/templates/intelliarts_footer.xml"/>
+    </target>
+
+<!--TARGETS FOR TXT FILES-->
+   <!-- <target name="dita2ia-webhelp-responsive-YB"
+            depends="dita2image-path"/>
+
+    <target name="dita2image-path">
+        <xslt in="${args.input}"
+              out="${dita.temp.dir}/images-list.txt"
+              style="${dita.plugin.com.ia-trainee-task-YB.dir}/xsl/image-task.xsl">
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>-->
 </project>
 

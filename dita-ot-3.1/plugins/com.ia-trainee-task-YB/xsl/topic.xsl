@@ -57,25 +57,25 @@
 
     <!--Template for concept-->
     <xsl:template match="conbody/p">
-            <xsl:variable name="element-name" select="name()"/>
-            <xsl:variable name="position" select="count(preceding-sibling::p)+1"/>
-            <xsl:element name="{$element-name}">
-                <xsl:attribute name="class">
-                    <xsl:choose>
-                        <xsl:when test="$position mod 2 = 0">
-                            <xsl:value-of select="'even_p'"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="'odd_p'"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:attribute>
-                <xsl:if test="@id">
-                    <xsl:attribute name="id" select="@id"/> <!--applying id (in <p>)-->
-                </xsl:if>
-                <xsl:value-of select="concat('Current &lt;', $element-name,'&gt; #',$position, ' ')"/>
-                <xsl:apply-templates select="node()"/> <!--applying all content after conversation 'Current...'-->
-            </xsl:element>
+        <xsl:variable name="element-name" select="name()"/>
+        <xsl:variable name="position" select="count(preceding-sibling::p)+1"/>
+        <xsl:element name="{$element-name}">
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="$position mod 2 = 0">
+                        <xsl:value-of select="'even_p'"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="'odd_p'"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
+            <xsl:if test="@id">
+                <xsl:attribute name="id" select="@id"/> <!--applying id (in <p>)-->
+            </xsl:if>
+            <xsl:value-of select="concat('Current &lt;', $element-name,'&gt; #',$position, ' ')"/>
+            <xsl:apply-templates select="node()"/> <!--applying all content after conversation 'Current...'-->
+        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
 

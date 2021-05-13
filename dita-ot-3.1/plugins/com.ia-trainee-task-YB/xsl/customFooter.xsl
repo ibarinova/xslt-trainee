@@ -5,10 +5,10 @@
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:whc="http://www.oxygenxml.com/webhelp/components">
 
-    <xsl:param name="tocNumbering" select="'true'"/>
+    <!--<xsl:param name="tocNumbering" select="'true'"/>
     <xsl:param name="using_transtype"/>
 
-    <!--Template for adding custom footer -->
+    &lt;!&ndash;Template for adding custom footer &ndash;&gt;
     <xsl:template match="whc:include_html[@href='footer.xml']" mode="copy_template create-tiles">
         <xsl:choose>
             <xsl:when test="$using_transtype = 'ia-webhelp-responsive-YB'">
@@ -26,6 +26,6 @@
                 <xsl:next-match/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template>-->
 
 </xsl:stylesheet>
