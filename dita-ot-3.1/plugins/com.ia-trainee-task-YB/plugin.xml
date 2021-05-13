@@ -23,7 +23,14 @@
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage.param" file="parameters.xml"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage.param" file="parameters.xml"/>
     <feature extension="com.oxygenxml.webhelp.xsl.createIndexTermsPage.param" file="parameters.xml"/>
-    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp.param" file="parameters.xml"/><!--
+    <feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp.param" file="parameters.xml"/>
 
+    <!--features for unordered dlentry-->
+    <feature extension="dita.xsl.html5" file="xsl/dlentry_unordered.xsl"/>
+
+    <!--features for breadscrumbs-->
+    <feature extension="com.oxygenxml.webhelp.xsl.createSearchPage" file="xsl/custom_breadscrumb_searchPage.xsl"/>
+
+    <!--
     <feature extension="com.oxygenxml.webhelp.xsl.createMainPage" file="xsl/reverseTOC.xsl"/>-->
 </plugin>

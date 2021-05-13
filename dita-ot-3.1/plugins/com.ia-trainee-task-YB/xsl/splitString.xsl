@@ -13,25 +13,33 @@
 
     <!--Splitting args.input with tokenize-->
     <xsl:template match="*[contains(@class, ' topic/p ')]" priority="7">
-        <xsl:next-match/>
-        <xsl:variable name="str" select="$using_input"/>
-        <xsl:variable name="tokenizedList" select="tokenize($str, '/')"/>
-        <xsl:variable name="separator" select="' * '"/>
+        <xsl:choose>
+            <xsl:when test="$using_transtype = 'ia-webhelp-responsive-YB'">
 
-        <xsl:for-each select="$tokenizedList">
-            <span style="color:blue">
-                <xsl:value-of select="concat(., $separator)"/>
-            </span>
-        </xsl:for-each>
-        <div>
-            <xsl:call-template name="splitstr">
-                <xsl:with-param name="str" select="$using_input"/>
-                <xsl:with-param name="separator" select="' % '"/>
-            </xsl:call-template>
-        </div>
-        <div style="color:pink">
-            <xsl:copy-of select="yb:split($using_input)"/>
-        </div>
+                <xsl:next-match/>
+                <xsl:variable name="str" select="$using_input"/>
+                <xsl:variable name="tokenizedList" select="tokenize($str, '/')"/>
+                <xsl:variable name="separator" select="' * '"/>
+
+                <xsl:for-each select="$tokenizedList">
+                    <span style="color:blue">
+                        <xsl:value-of select="concat(., $separator)"/>
+                    </span>
+                </xsl:for-each>
+                <div>
+                    <xsl:call-template name="splitstr">
+                        <xsl:with-param name="str" select="$using_input"/>
+                        <xsl:with-param name="separator" select="' % '"/>
+                    </xsl:call-template>
+                </div>
+                <div style="color:pink">
+                    <xsl:copy-of select="yb:split($using_input)"/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
 
