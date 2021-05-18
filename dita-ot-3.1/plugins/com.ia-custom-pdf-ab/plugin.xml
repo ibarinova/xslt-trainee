@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.dita-ot.org/rng/plugin.rnc" type="application/relax-ng-compact-syntax"?>
+
+<plugin id="com.ia-custom-pdf-ab">
+    <require plugin="org.dita.pdf2"/>
+    <transtype name="ia-custom-pdf-ab" extends="pdf" desc="PDF on A4 paper"/>
+    <feature extension="dita.transtype.print" value="ia-custom-pdf-ab"/>
+    <feature extension="ant.import" file="integrator.xml"/>
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom.xsl"/>
+</plugin>
